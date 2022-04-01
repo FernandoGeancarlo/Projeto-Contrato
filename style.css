@@ -135,5 +135,43 @@ main{
     z-index: -1;
 }
 
+#centro-data{
+text-align: center; 
+margin-top: 20px;
+}
+
+.centro-assinatura{
+    text-align: left; 
+    margin-top: 35px;
+    margin-left: 70px;
+}
+
+.baixo-assinatura{
+    margin-left: 160px;
+}
+
+.centro-testemunha{
+    margin-left: 250px
+}
+
+.contratante-testemunha{
+    text-align: left; 
+    margin-left: 125px
+}
+
+.top-nome-cpf{
+    margin-top: 35px;
+}
+
+.nome-cpf{
+    text-align: left; 
+    margin-left: 25px; 
+}
+
+.campo-nome-cpf{
+    margin-left: 120px;
+    margin-top: 150px;
+}
+
 
 
