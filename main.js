@@ -1,0 +1,2 @@
+import { Clinica } from "./Clinica";
+

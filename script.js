@@ -29,5 +29,8 @@ function GerarContrato() {
     let scroll = document.getElementById("principal");
     scroll.style.overflow = "visible";
     window.print();
+
+  
+
   }
 
