@@ -25,12 +25,6 @@ function GerarContrato() {
 
     let formulario = document.getElementById("conteiner");
     formulario.style.display="none";
-
-    let scroll = document.getElementById("principal");
-    scroll.style.overflow = "visible";
     window.print();
-
-  
-
   }
 
