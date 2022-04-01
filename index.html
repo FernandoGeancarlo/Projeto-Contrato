@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CONTRATO-DNTBRAS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="conteiner">
+        <div class="inputs">
+            <p style="margin:2px;">Especialidade Desejada</p>
+            <select class="selects">
+                <option>Selecione uma opção</option>
+                <option value="clinico">CLINICO GERAL</option>
+                <option value="orto">ORTODONTIA</option>
+                <option value="protese">PRÓTESE</option>
+                <option value="implante">IMPLANTODONTIA</option>
+                <option value="estetica">ESTÉTICA</option>
+            </select>
+
+            <p style="margin:2px;">Clínica Desejada</p>
+            <select class="selects">
+                <option>Selecione uma opção</option>
+                <option value="anil">ANIL</option>
+                <option value="caxias">CAXIAS</option>
+                <option value="rua-grande">RUA GRANDE</option>
+                <option value="cohab">COHAB</option>
+                <option value="deodoro">DEODORO</option>
+                <option value="imperatriz">IMPERATRIZ</option>
+            </select>
+
+            <label for="nome_profissional" class="registro">Informe o nome do profissional</label>
+            <input id="nome_profissional" class="input-registro" type="text" required
+                placeholder="Ex: Fernando Geancarlo Araujo Oliveira">
+
+            <label for="cpf_profissional" class="registro">Informe o CPF do profissional</label>
+            <input id="cpf_profissional" class="input-registro" type="text" required placeholder="Ex: 555.444.333-22" maxlength="11">
+
+            <label for="cro_profissional" class="registro">CRO (Caso tenha):</label>
+            <input id="cro_profissional" class="input-registro" type="text" required placeholder="CRO-MA:5555">
+        </div>
+
+        <legend>Endereço Profissional</legend>
+        <div class="divisor">
+            <div class="div1">
+                <label for="bairro" class="registro">Bairro:</label>
+                <input id="bairro" class="input-endereço" type="text" required placeholder="Ex:Jardim Dourado">
+
+                <label for="logradouro" class="registro">Logradouro:</label>
+                <input id="logradouro" class="input-endereço" type="text" required placeholder="Ex:Rua fulano de tal">
+            </div>
+            <div class="div2">
+                <label for="numero" class="registro">N°/APT</label>
+                <input id="numero" class="input-endereço" type="text" required placeholder="Ex:n°706 ou Apt 702">
+
+                <label for="complemento" class="registro">Complemento</label>
+                <input id="complemento" class="input-endereço" type="text" required placeholder="Quadra 32 ou Torre 5">
+            </div>
+        </div>
+        <button id="botao" type="submit" onclick="GerarContrato()">Gerar contrato</button>
+    </div>
+    <main class="formatar">
+
+        <img class="imagem-contrato" src="cabeçalho.png" alt="Imagem Contrato">
+        <h4 class="titulo-contrato">CONTRATO DE PRESTAÇÃO DE SERVIÇO AUTÔNOMO DE CIRURGIÃO DENTISTA</h4>
+            <div class="texto">
+            <label>Por meio do presente, as partes aqui indicadas, de um lado CLINICA DENTISTAS DO BRASIL ANIL LTDA CNPJ:32.318.493/0001/07 estabelecida na Av Casemiro Junior, N°33, Anil, 65.045-180, São Luis-MA a seguir denominado como CONTRATANTE, e de outro</label>
+
+            <span id="nome-profissional">_____________________________________________________</span>, CPF:
+
+            <span id="cpf-profissional">________________________</span>, INSCRITO (A) NO
+            CRO/MA:
+            <span id="cro-profissional">________</span> residente e domiciliado (a) na
+
+            <span id="endereco-profissional">______________________________________________________________</span>
+            indicado como CONTRATADO(A), têm entre si justo e acertado o presente contrato de prestação de serviço de
+            autônomo, que regerá toda a relação ora formalizada.
+
+            <p>
+            <strong>CLÁUSULA 01 – OBJETO</strong> O presente contrato tem como objeto a prestação de serviços odontológicos pelo CONTRATADA, em sua área especializada de atuação, no estabelecimento comercial do CONTRATANTE.
+            </p>
+
+            <p>
+            <strong>CLÁUSULA 02 – PRAZO </strong> O presente contrato tem vigência a partir da data de assinatura do mesmo, com término em 6 (SEIS) meses a partir desta data.
+            </p>
+
+            <p>
+            <strong>CLÁUSULA 03 – RESCISÃO</strong> A rescisão ocorrerá a partir do interesse de qualquer das partes, facultado o prazo de 24 horas para comunicação.
+            </p>
+
+            <p>
+            <strong>PARÁGRAFO PRIMEIRO</strong> Findo o prazo do contrato de trabalho e não havendo a rescisão do mesmo, o contrato se prorroga automaticamente por prazo indeterminado.
+            </p>
+
+            <p>
+            <strong>PARÁGRAFO SEGUNDO</strong> Com a rescisão, o CONTRATANTE e o(a) CONTRATADO(A) poderão elaborar relatório de liquidação dos trabalhos pendentes de acerto, dando ciência e oportunizando o contraditório.
+            </p>
+
+            <p>
+            <strong>CLÁUSULA 04 – ATENDIMENTOS E HORÁRIOS DE TRABALHO</strong> Os atendimentos ocorrerão a partir do agendamento dos clientes do(a) CONTRATADO(A), podendo ser feitos pelo(a) mesmo(a) ou pelos seus clientes através do setor competente do CONTRATANTE.
+            </p>
+
+            <p>
+            <strong>PARÁGRAFO PRIMEIRO</strong> A sede do CONTRATANTE funcionará entre ____h____min e ____h____min de segunda-feira a
+            sexta-feira, e aos sábados entre ____h____min e ____h____min, cabendo exclusivamente ao(à) CONTRATADO(A) a organização de sua agenda, horário de trabalho e de atendimentos.
+            </p>
+
+            <p>
+            <strong>PARÁGRAFO SEGUNDO</strong> Fica convencionado entre as partes que os atendimentos deverão estar agendados junto ao CONTRATANTE com antecedência mínima de 24 (vinte e quatro) horas, a fim de potencializar o uso dos espaços físicos do CONTRATANTE, evitando também desconforto aos pacientes do(a) CONTRATADO(A) e dos demais profissionais.
+            </p>
+
+            <p>
+            <strong>CLÁUSULA 05 – DAS OBRIGAÇÕES DO CONTRATANTE</strong> O CONTRATANTE concederá o direito de uso de suas salas, equipamentos odontológicos, móveis, medicamentos e da força de trabalho de seus empregados a fim do melhor desenvolvimento das atividades profissionais do(a) CONTRATADO(A).
+            </p>
+
+            <p>
+            <strong>PARÁGRAFO PRIMEIRO</strong> Estarão disponíveis ao(à) CONTRATADO(A) funcionários para limpeza do consultório e da clínica em geral, ajudantes e recepcionistas, cujo pagamento será de responsabilidade do CONTRATANTE.
+            </p>
+
+            <p>
+            <strong>PARÁGRAFO SEGUNDO</strong> Caberá ao CONTRATANTE e/ou ao(à) CONTRATADO(A), a apresentação de relatório de produção e atendimentos, bem como os próprios pagamentos decorrentes de forma semanal.
+            </p>
+
+            <p>
+            <strong>PARÁGRAFO TERCEIRO</strong> É de responsabilidade também do CONTRATANTE a lidar com órgãos de fiscalização de todas
+            as áreas, sejam elas trabalhistas, fiscais, sanitárias e do conselho de classe no que diz empresa.
+            </p>
+
+            <p>
+            <strong>CLÁUSULA 06 – DAS OBRIGAÇÕES DO(A) CONTRATADO(A)</strong> O(A) CONTRATADO(A) se responsabilizará pelo material de seu uso pessoal, como motores de alta e baixa rotação, paramentação, brocas e outros materiais que entender necessários à complementação daqueles já existentes nos consultórios disponibilizados pelo CONTRATANTE.
+            </p>
+
+            <p>
+            <strong>PARÁGRAFO PRIMEIRO</strong> É do(a) CONTRATADO(A) a responsabilidade técnica pelos procedimentos clínicos que realiza, devendo o(a) mesmo(a) responder em eventuais casos de reclamações de seus pacientes por tratamentos realizados.
+            </p>
+
+            <p>
+            <strong>PARÁGRAFO SEGUNDO</strong> Caberá também ao(à) CONTRATADO(A) a apresentação do competente alvará para trabalho, bem como o cadastro junto ao município de atuação para emissão de notas fiscais e Recibos de Pagamento Autônomo.
+            </p>
+
+            <p>
+            <strong>CLÁUSULA 07 – DA POSSIBILIDADE DE SUBSTITUIÇÃO</strong> Caso o(a) CONTRATADO(A) não possa comparecer em oportunidade em que já estiver com atendimentos a serem realizados, tem a faculdade de se fazer substituir por profissional igualmente habilitado, de mesma capacidade técnica e especialidade, com inscrição no Conselho Regional de Odontologia e demais obrigações legais inerentes.
+            </p>
+            
+            <p>
+            <strong>CLÁUSULA 08 – DA INEXISTÊNCIA DE VÍNCULO EMPREGATÍCIO</strong> Não há vínculo empregatício na presente relação, com todas as cláusulas deste contrato convergindo nesse sentido, senão veja-se:
+            </p>
+                <img class="foter" src="rodape.png" alt="footer">
+                <div style="height: 25px;"></div>
+
+                <img class="imagem-contrato" src="cabeçalho.png" alt="Imagem Contrato">
+            <p>
+           <strong>PARÁGRAFO PRIMEIRO – SUBORDINAÇÃO JURÍDICA </strong> O(A) CONTRATADO(A) realizará o procedimento clínico na forma prescrita pela formação no curso de Odontologia, fundamentada na melhor prática e literatura, sem ingerência do CONTRATANTE e seus prepostos, uma vez se tratar de trabalho técnico.
+            </p>
+
+            <p>
+            <strong>PARÁGRAFO SEGUNDO – HABITUALIDADE </strong> O(A) CONTRATADO(A) não guarda com o CONTRATANTE obrigatoriedade de comparecimento periódico no local de trabalho, cabendo exclusivamente ao(à) CONTRATADO(A) o agendamento de seus atendimentos; ficando livre para se ausentar conforme seu entendimento, obedecendo apenas a programação realizada por ele(a) próprio(a).
+            </p>
+
+            <p>
+            <strong>PARÁGRAFO TERCEIRO – PESSOALIDADE</strong> Na hipótese de agendamento de serviço odontológico e caso não possa comparecer por qualquer motivo, tem o(a) CONTRATADO(A) a faculdade de se fazer substituir por profissional de sua confiança.
+            </p>
+
+            <p>
+            <strong>PARÁGRAFO QUARTO – ALTERIDADE</strong> Cabe ao(à) CONTRATADO(A) a responsabilidade e assunção dos riscos pelos procedimentos odontológicos por ela realizados, bem como a compra de materiais não fornecidos pelo CONTRATANTE necessários aos citados procedimentos.
+            </p>
+                
+            <p>
+            <strong>CLÁUSULA 09 – DOS VALORES DOS PROCEDIMENTOS</strong> Caberá ao(à) CONTRATADO(A) definir os valores relativos a cada procedimento odontológico.
+            </p>
+
+            <p>
+            <strong>PARÁGRAFO PRIMEIRO</strong> Os pagamentos relativos aos procedimentos serão realizados pelos clientes diretamente ao CONTRATANTE que, após a retirada de seu percentual, passará o remanescente ao(à) CONTRATADO(A).
+            </p>
+
+            <p>
+            <strong>CLÁUSULA 10 - EXCLUSIVIDADE</strong> Todo e qualquer paciente iniciado neste estabelecimento em hipótese nenhuma poderá ser encaminhado para outro estabelecimento que realize os mesmos serviços, sob pena de multa de cinco vezes o valor do tratamento completo para o profissional que fez o encaminhamento.
+            </p>
+
+            <p>
+            <strong>PARÁGRAFO PRIMEIRO</strong>: Entende-se que o paciente uma vez que entrou no estabelecimento para realizar tratamento
+            odontológico e encaminhado para outro local sem o consentimento dos sócios da empresa é crime penal e será realizado a apuração dos fatos e responderá na vara criminal desta cidade.
+            </p>
+
+            <p>
+            <strong>CLÁUSULA 11- IMAGEM</strong> Autoriza o uso de sua imagem, para veiculação pública, sem qualquer restrição ao formato da mídia, sem nenhum ônus ou obrigação, em tempo indeterminado.
+            </p>
+
+            <p>
+            <strong>PARÁGRAFO PRIMEIRO</strong> Fica assegurado ao CONTRATANTE, mesmo após o período acima fixado, continuar utilizando esses bens (imagem), para uso editorial, institucional e não comercial.
+            </p>
+
+            <p>
+            <strong>CLÁUSULA 12– FORO</strong> Elegem as partes o foro da Comarca de São Luís - MA para dirimir eventuais questionamentos
+            acerca do presente contrato.
+            </p>
+
+
+            <p style="text-align: center; margin-top: 20px;">,______ de ______ _____ de ______ _.</p>
+
+
+            <p style="text-align: left; margin-top: 35px;margin-left: 70px;">
+                ___________________________      
+            <label style="margin-left: 160px;";">___________________________ </label>
+                        <p style="text-align: left; margin-left: 127px;">CONTRATANTE
+                        <label style="margin-left: 270px;">CONTRATADO(A)</label>
+                        </p> 
+                                     
+            </p>
+            
+            
+            <p style="text-align: left; margin-left: 70px;margin-top: 35px;">___________________________ 
+                <label style="margin-left: 160px;">___________________________</label>
+            <p style="text-align: left; margin-left: 115px;">TESTEMUNHA 01 
+                <label style="margin-left: 260px;">TESTEMUNHA 02</label>
+            </p>
+                </p>
+
+         <p style="text-align: left; margin-left: 25px; margin-top:35px">
+            NOME:___________________________ 
+            <label style="margin-left: 120px;">NOME: __________________________</label>
+                    
+            <p style="text-align: left; margin-left: 25px;">CPF: _____________________________ 
+            <label style="text-align: left; margin-left: 120px;">CPF:____________________________</label></p>
+                     </p>
+                    </div>
+
+            <img class="rodape" src="rodape.png" alt="footer">
+    </main>
+    <script src="/Projeto - Contrato/script.js"></script>
+</body>
+
+</html>
