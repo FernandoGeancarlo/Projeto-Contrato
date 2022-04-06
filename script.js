@@ -1,3 +1,4 @@
+//Função para adicionar os dados preenchidos no contrato
 function GerarContrato() {
 
     // Pega o dado informado no campo ''Nome do profissional''
