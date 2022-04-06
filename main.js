@@ -1,4 +1,4 @@
-// import { Clinica } from "./Clinica.js";
+import { Clinica } from "./Clinica.js";
 
 const ANIL = new Clinica("CLINICA ODONTOLOGICA DENTISTAS DO BRASIL ANIL LTDA","32.318.493/0001-07", "AV CASEMIRO JUNIOR, Nº 33 - ANIL, CEP: 65.045-180, SÃO LUIS - MA");
 

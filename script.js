@@ -34,5 +34,4 @@ function GerarContrato() {
     let formulario = document.getElementById("conteiner");
     formulario.style.display="none";
     window.print();
-  }
-
+  } 
