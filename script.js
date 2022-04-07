@@ -1,5 +1,4 @@
 //Função para adicionar os dados preenchidos no contrato
-
 function GerarContrato() {
     // Pega o dado informado no campo ''Nome do profissional''
     let nomeProfissional = document.getElementById("nome_profissional").value;
@@ -36,7 +35,8 @@ function GerarContrato() {
     window.print();
   } 
 
-  function SelectAtualizado(){
+  //Função para pegar os selects
+     function SelectAtualizado(){ 
     let select = document.getElementById("clinicas");
     let texto = select.options[select.selectedIndex].text;
 
