@@ -1,6 +1,6 @@
 //Função para adicionar os dados preenchidos no contrato
-function GerarContrato() {
 
+function GerarContrato() {
     // Pega o dado informado no campo ''Nome do profissional''
     let nomeProfissional = document.getElementById("nome_profissional").value;
     // Refereciando o campo Nome do profissional para ser preenchido na 1° página do contrato
@@ -35,3 +35,10 @@ function GerarContrato() {
     formulario.style.display="none";
     window.print();
   } 
+
+  function SelectAtualizado(){
+    let select = document.getElementById("clinicas");
+    let texto = select.options[select.selectedIndex].text;
+
+    console.log(texto);
+  }

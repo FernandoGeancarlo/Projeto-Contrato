@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;700&display=swap" rel="stylesheet">
-<script src="https://fernandogeancarlo.github.io/Projeto-Contrato/script.js"></script>
+
 </head>
 
 <body>
@@ -25,7 +25,7 @@
             </select>
 
             <p style="margin:2px;">Clínica Desejada</p>
-            <select class="selects">
+            <select id="clinicas" class="selects" onchange="SelectAtualizado()">
                 <option>Selecione uma opção</option>
                 <option value="anil">ANIL</option>
                 <option value="caxias">CAXIAS</option>
@@ -121,7 +121,7 @@
             <label>Por meio do presente, as partes aqui indicadas, de um lado
             <span class="nome-clinica">CLINICA DENTISTAS DO BRASIL ANIL LTDA</span> 
             CNPJ:<span class="cnpj-clinica">32.318.493/0001/07</span> estabelecida na 
-            <span class="endereco-clinica">AV CASEMIRO JUNIOR, Nº 33 - ANIL - CEP: 65.045-180
+            <span id="endereco-clinica">AV CASEMIRO JUNIOR, Nº 33 - ANIL - CEP: 65.045-180
             </span>a seguir denominado como CONTRATANTE, e de outro</label>
 
             <span id="nome-profissional">_____________________________________________________</span>, CPF:
@@ -289,9 +289,9 @@
             </div>   
 
                     </div>
-
             <img class="rodape" src="Imagens/rodape.png" alt="footer">
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
