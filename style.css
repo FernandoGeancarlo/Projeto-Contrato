@@ -55,7 +55,6 @@ body {
     border: 1px solid #ccc;  
 }
 
-
 #botao {
     padding: 15px;
     width: 130px;
@@ -81,17 +80,23 @@ legend{
 /*Caixa do endereço profissional*/
 .divisor{
     display: flex;
-    width: 100%;
     text-align: center;
+    width:100%;
     margin-top:10px;
     padding: 10px;
+}
+
+.endereco-p{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 90%;
 }
 
 /*colocando a div lado a lado*/
 .div1, .div2{
     width: 50%;
     margin: 5px;
-}
+} 
 
 /*Formatação do texto da página*/
 main{
@@ -187,6 +192,10 @@ margin-top: 20px;
 .campo-nome-cpf{
     margin-left: 120px;
     margin-top: 150px;
+}
+
+#nome-clinica, #cnpj-clinica, #endereco-clinica, #nome-profissional, #cpf-profissional, #cro-profissional, #endereco-profissional{
+    font-weight: bold;
 }
 
 

@@ -98,20 +98,20 @@
         <div class="divisor">
             <div class="div1">
                 <label for="bairro" class="registro">Bairro:</label>
-                <input id="bairro" class="input-endereço" type="text" required placeholder="Ex:Jardim Dourado">
+                <input id="bairro" class="endereco-p" type="text" required placeholder="Ex:Jardim Dourado">
 
                 <label for="logradouro" class="registro">Logradouro:</label>
-                <input id="logradouro" class="input-endereço" type="text" required placeholder="Ex:Rua fulano de tal">
+                <input id="logradouro" class="endereco-p" type="text" required placeholder="Ex:Rua fulano de tal">
             </div>
             <div class="div2">
                 <label for="numero" class="registro">N°/APT</label>
-                <input id="numero" class="input-endereço" type="text" required placeholder="Ex:n°706 ou Apt 702">
+                <input id="numero" class="endereco-p" type="text" required placeholder="Ex:n°706 ou Apt 702">
 
                 <label for="complemento" class="registro">Complemento</label>
-                <input id="complemento" class="input-endereço" type="text" required placeholder="Quadra 32 ou Torre 5">
+                <input id="complemento" class="endereco-p" type="text" required placeholder="Quadra 32 ou Torre 5">
             </div>
         </div>
-        <button id="botao" type="submit" onclick="GerarContrato()">Gerar contrato</button>
+        <button id="botao" type="submit">Gerar contrato</button>
     </div>
     <main class="formatar">
 
@@ -119,15 +119,15 @@
         <h4 class="titulo-contrato">CONTRATO DE PRESTAÇÃO DE SERVIÇO AUTÔNOMO DE CIRURGIÃO DENTISTA</h4>
             <div class="texto">
             <label>Por meio do presente, as partes aqui indicadas, de um lado
-            <span class="nome-clinica">CLINICA DENTISTAS DO BRASIL ANIL LTDA</span> 
-            CNPJ:<span class="cnpj-clinica">32.318.493/0001/07</span> estabelecida na 
-            <span id="endereco-clinica">AV CASEMIRO JUNIOR, Nº 33 - ANIL - CEP: 65.045-180
-            </span>a seguir denominado como CONTRATANTE, e de outro</label>
+            <span id="nome-clinica">_____________________________</span>, 
+            CNPJ:<span id="cnpj-clinica">_________________</span> estabelecida na 
+            <span id="endereco-clinica">________________________________</span>
+            a seguir denominado como CONTRATANTE, e de outro</label>
 
             <span id="nome-profissional">_____________________________________________________</span>, CPF:
 
             <span id="cpf-profissional">________________________</span>, INSCRITO (A) NO
-            CRO/MA:
+
             <span id="cro-profissional">________</span> residente e domiciliado (a) na
 
             <span id="endereco-profissional">______________________________________________________________</span>
@@ -291,7 +291,7 @@
                     </div>
             <img class="rodape" src="Imagens/rodape.png" alt="footer">
     </main>
-    <script src="script.js"></script>
+    <script type="module" src="script.js" defer></script>
 </body>
 
 </html>
