@@ -14,6 +14,9 @@
 <body>
     <div id="conteiner">
         <div class="inputs">
+            <header>
+                <img src="Logo.webp">
+            </header>
             <p style="margin:2px;">Especialidade Desejada</p>
             <select class="selects">
                 <option>Selecione uma opção</option>
@@ -88,7 +91,7 @@
                 placeholder="Ex: Fernando Geancarlo Araujo Oliveira">
 
             <label for="cpf_profissional" class="registro">Informe o CPF do profissional</label>
-            <input id="cpf_profissional" class="input-registro" type="text" required placeholder="Ex: 555.444.333-22" maxlength="11">
+            <input id="cpf_profissional" class="input-registro" type="text" autocomplete="off" placeholder="Ex: 555.444.333-22" maxlength="14">
 
             <label for="cro_profissional" class="registro">CRO (Caso tenha):</label>
             <input id="cro_profissional" class="input-registro" type="text" required placeholder="CRO-MA:5555">
@@ -292,6 +295,7 @@
             <img class="rodape" src="Imagens/rodape.png" alt="footer">
     </main>
     <script type="module" src="script.js" defer></script>
+    <script src="TempoReal.js" defer></script>
 </body>
 
 </html>

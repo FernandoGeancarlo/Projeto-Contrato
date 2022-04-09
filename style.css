@@ -196,6 +196,7 @@ margin-top: 20px;
 
 #nome-clinica, #cnpj-clinica, #endereco-clinica, #nome-profissional, #cpf-profissional, #cro-profissional, #endereco-profissional{
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 

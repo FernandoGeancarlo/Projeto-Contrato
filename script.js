@@ -271,7 +271,6 @@ let clinica = [
 
 ]
 
-
 let botao = document.getElementById("botao");
 botao.addEventListener('click',GerarContrato)
 
