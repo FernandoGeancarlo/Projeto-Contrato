@@ -14,7 +14,7 @@ body {
 
 /*Mexe com a barra das informações na esquerda*/
 #conteiner {
-    width: 40%;
+    width: 50%;
     max-width: 40%;
     background-color: rgba(2, 0, 105, 0.637);
     height: 100vh;
@@ -103,7 +103,6 @@ main{
     color: black;
     margin: 20px;
     text-align: justify;
-    height: 93vh;
     font-size: 13.1px;
     font-family:Calibri;
 }

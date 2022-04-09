@@ -19,13 +19,16 @@
 
 <body>
     <div id="conteiner">
+        <header id="teste">
+            
+        </header>
         <div class="inputs">
             <header>
                 <img src="/Projeto-Contrato/Imagens/Logo.webp">
             </header>
             <p style="margin:2px;">Especialidade Desejada</p>
             <select class="selects">
-                <option>Selecione uma opção</option>
+                <option selected></option>
                 <option value="clinico">CLINICO GERAL</option>
                 <option value="orto">ORTODONTIA</option>
                 <option value="protese">PRÓTESE</option>
@@ -36,7 +39,7 @@
             
             <p style="margin:2px;">Clínica Desejada</p>
             <select id="clinicas" class="selects" onchange="SelectAtualizado()">
-                <option>Selecione uma opção</option>
+                <option selected></option>
                 <option value="anil">ANIL</option>
                 <option value="caxias">CAXIAS</option>
                 <option value="rua-grande">RUA GRANDE</option>
@@ -93,12 +96,17 @@
                 <option value="campina-grandec1">CAMPINA GRANDE CENTRO</option>
             </select>
 
-            <label for="nome_profissional" class="registro">Informe o nome do profissional</label>
+            <label for="nome_profissional" class="registro">Nome do profissional</label>
             <input id="nome_profissional" class="input-registro" type="text" required
                 placeholder="Ex: Fernando Geancarlo Araujo Oliveira">
 
+<<<<<<< Updated upstream
             <label for="cpf_profissional" class="registro">Informe o CPF do profissional</label>
             <input id="cpf_profissional" class="input-registro" type="text" autocomplete="off" placeholder="Ex: 555.444.333-22" maxlength="14">
+=======
+            <label for="cpf_profissional" class="registro">CPF do profissional</label>
+            <input id="cpf_profissional" class="input-registro" type="text" required placeholder="Ex: 555.444.333-22" maxlength="11">
+>>>>>>> Stashed changes
 
             <label for="cro_profissional" class="registro">CRO (Caso tenha):</label>
             <input id="cro_profissional" class="input-registro" type="text" required placeholder="CRO-MA:5555">
