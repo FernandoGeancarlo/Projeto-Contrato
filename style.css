@@ -16,7 +16,8 @@ body {
 #conteiner {
     width: 50%;
     max-width: 40%;
-    background: linear-gradient(90deg, #27282a, #485c5d);
+    background-image: url(Imagens/Fundo.jpg);
+    background-size: cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
