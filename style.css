@@ -16,11 +16,12 @@ body {
 #conteiner {
     width: 50%;
     max-width: 40%;
-    background-color: rgba(2, 0, 105, 0.637);
+    background: linear-gradient(90deg, #27282a, #485c5d);
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: fixed;
 }
 
 /*Div criada para mexer na caixa de Especialidade Desejada até CRO*/
@@ -40,6 +41,20 @@ body {
     padding: 5px;
     margin: 2px;
     width: 76%;
+    background: transparent;
+}
+
+input{
+    background: transparent;
+    border: 1px solid #ccc;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    color: white;
+}
+
+input::placeholder{
+    color: rgb(255, 255, 255);
 }
 
 /*Classes dos labels na página*/
@@ -52,29 +67,47 @@ body {
 .input-registro, .input-endereço {
     padding: 6px;
     width: 250px;
-    border: 1px solid #ccc;  
 }
 
-#botao {
-    padding: 15px;
-    width: 130px;
+.botao {
+    padding: 12px 25px;   
     margin-top: 10px;
-    background-color: rgb(190, 255, 85);
-    border-color: #68a7dd;
-    color: black;
-    border-radius: 20px;
+    border-radius: 40px;
     margin-top: 15px;
     cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(70, 139, 243);
+    border: none;
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.botao::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(88, 88, 184);
+    z-index: -1;
+    transition: .5s ease;
+}
+
+.bt1::before{
+    width: 0;
+    height: 100%;
+}
+
+.bt1:hover::before{
+    width: 100%;
 }
 
 /*Endereço Profissional*/
 legend{
-    margin-top: 15px;
-    text-align: center;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    padding: 15px;
-    background-color: rgba(10, 3, 34, 0.719);
+    margin-top: 2px;
 }
 
 /*Caixa do endereço profissional*/
@@ -88,8 +121,8 @@ legend{
 
 .endereco-p{
     padding: 10px;
-    border: 1px solid #ccc;
     width: 90%;
+
 }
 
 /*colocando a div lado a lado*/
@@ -111,7 +144,10 @@ main{
 .formatar{
     height: 700px;
     width: 1122px;
-    margin: 0 auto;
+}
+
+#on-off{
+    margin-left: 40%;
 }
 
 .imagem-contrato{

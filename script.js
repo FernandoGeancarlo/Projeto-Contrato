@@ -323,6 +323,11 @@ function GerarContrato() {
 
     let formulario = document.getElementById("conteiner");
     formulario.style.display="none";
+
+    let desativar = document.getElementById("on-off");
+     desativar.style.margin= 'auto';
+     
+
     window.print();
   } 
 
