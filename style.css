@@ -16,7 +16,7 @@ body {
 #conteiner {
     width: 50%;
     max-width: 40%;
-    background-image: url(Imagens/Fundo.jpg);
+    background-image: url(Imagens/imagem2.jpg);
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -55,7 +55,7 @@ input{
 }
 
 input::placeholder{
-    color: rgb(255, 255, 255);
+    color: #f5dfbb;
 }
 
 /*Classes dos labels na página*/
