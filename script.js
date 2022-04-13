@@ -326,8 +326,6 @@ function GerarContrato() {
 
     let desativar = document.getElementById("on-off");
      desativar.style.margin= 'auto';
-     
-
     window.print();
   } 
 

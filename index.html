@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>CONTRATO-DNTBRAS</title>
+    <title>Contrato DNTBRAS</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" type="imagem/png" href="Imagens/Logo-Login-DentistasBrasil.png" />
@@ -31,7 +31,7 @@
                 <img src="Imagens/Logo.webp">
             </header>
             <p style="margin:2px;">Especialidade Desejada</p>
-            <select class="selects">
+            <select id="especialidade" class="selects" onchange="Alterar()">
                 <option selected></option>
                 <option value="clinico">CLINICO GERAL</option>
                 <option value="orto">ORTODONTIA</option>
@@ -42,7 +42,7 @@
 
             
             <p style="margin:2px;">Clínica Desejada</p>
-            <select id="clinicas" class="selects" onchange="SelectAtualizado()">
+            <select id="clinicas" class="selects" onclick="SelectAtualizado()">
                 <option selected></option>
                 <option value="anil">ANIL</option>
                 <option value="caxias">CAXIAS</option>
@@ -108,11 +108,11 @@
             <input id="cpf_profissional" class="input-registro" type="text" autocomplete="off" placeholder="Ex: 555.444.333-22" maxlength="14">
 
             <label for="cro_profissional" class="registro">CRO (Caso tenha):</label>
-            <input id="cro_profissional" class="input-registro" type="text" required placeholder="CRO-MA:5555">
+            <input id="cro_profissional" class="input-registro" type="text" required placeholder="CRO-MA:5555" maxlength="12">
         </div>
 
             <legend>Endereço Profissional</legend>
-        <div class="divisor">
+        <div id="div00" class="divisor">
             <div class="div1">
                 <label for="bairro" class="registro">Bairro:</label>
                 <input id="bairro" class="endereco-p" type="text" required placeholder="Ex:Jardim Dourado">
@@ -240,7 +240,7 @@
             <strong>PARÁGRAFO QUARTO – ALTERIDADE</strong> Cabe ao(à) CONTRATADO(A) a responsabilidade e assunção dos riscos pelos procedimentos odontológicos por ela realizados, bem como a compra de materiais não fornecidos pelo CONTRATANTE necessários aos citados procedimentos.
             </p>
                 
-            <p>
+            <p id="desaparecer">
             <strong>CLÁUSULA 09 – DOS VALORES DOS PROCEDIMENTOS</strong> Caberá ao(à) CONTRATADO(A) definir os valores relativos a cada procedimento odontológico.
             </p>
 
@@ -310,6 +310,7 @@
     </main>
     <script type="module" src="script.js" defer></script>
     <script src="TempoReal.js" defer></script>
+    <script src="teste.js"></script>
 </body>
 
 </html>
