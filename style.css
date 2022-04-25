@@ -146,7 +146,7 @@ main{
 
 .imagem-contrato{
     width: 100%;
-    height: 120px;   
+    height: 130px;   
 }
 
 .titulo-contrato{
@@ -156,7 +156,7 @@ main{
     font-weight: 700;
 }
 
-.texto-p1{
+.texto-p1, .texto-p2{
     margin-left: 60px;
     width: 87%;
 }
@@ -164,16 +164,15 @@ main{
 /*rodapé da 1° página do contrato*/
 .footer-p1{
     width: 100%;
-    z-index: -1;
     height: 60px;
 }
 
 /*rodapé da 2° página*/
-.rodape{
-    margin-top: 80px;
+.footer-p2{
     width: 100%;
     height: 60px;
-    z-index: -1;
+    position: relative;
+    top: 180px;
 }
 
 /*Centraliza a aba de preenchimento das datas na 2° página*/
@@ -182,45 +181,21 @@ text-align: center;
 margin-top: 20px;
 }
 
-/*Mexe com as abas de assinaturas de cima do CONTRATANTE E TESTEMUNHA 01 (___)*/
-.centro-assinatura{
-    text-align: left; 
-    margin-top: 35px;
-    margin-left: 70px;
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
 }
 
-/*Mexe com as abas de assinaturas de cima do contratado e testemunha*/
-.baixo-assinatura{
-    margin-left: 160px;
+.grid-item {
+    text-align: center;
 }
 
-/*Mexe com a posição do CONTRATADO e TESTEMUNHA 02*/
-.centro-testemunha{
-    margin-left: 250px
+.epc{
+    margin-top: 25px;
 }
 
-/* Mexe com a posição do CONTRATANTE e testemunha 01*/
-.contratante-testemunha{
-    text-align: left; 
-    margin-left: 125px
-}
 
-/* Da um top em todo o campo NOME e CPF*/
-.top-nome-cpf{
-    margin-top: 35px;
-}
-
-/* Mexe com o NOME e CPF do lado esquerdo*/
-.nome-cpf{
-    text-align: left; 
-    margin-left: 25px; 
-}
-
-/*Mexe com o NOME e CPF do lado direito*/
-.campo-nome-cpf{
-    margin-left: 120px;
-    margin-top: 150px;
-}
 
 #nome-clinica, #cnpj-clinica, #endereco-clinica, #nome-profissional, #cpf-profissional, #cro-profissional, #endereco-profissional{
     font-weight: bold;
