@@ -1,3 +1,4 @@
+/*Classes das clínicas*/
 let clinica = [
   {"nome": "ANIL",
   "razaoSocial": "CLINICA ODONTOLOGICA DENTISTAS DO BRASIL ANIL LTDA",
@@ -271,6 +272,7 @@ let clinica = [
 
 ]
 
+
 let botao = document.getElementById("botao");
 botao.addEventListener('click',GerarContrato)
 
@@ -324,8 +326,9 @@ function GerarContrato() {
     let formulario = document.getElementById("conteiner");
     formulario.style.display="none";
 
+    //Centraliza o texto após o click de imprimir
     let desativar = document.getElementById("on-off");
      desativar.style.margin= 'auto';
     window.print();
-  } 
+  }
 

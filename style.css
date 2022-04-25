@@ -5,11 +5,11 @@
 }
 
 body {
-    background-size: cover;
     font-size: 18px;
     color: white;
     font-family: 'Nunito', sans-serif;
     display: flex;
+    
 }
 
 /*Mexe com a barra das informações na esquerda*/
@@ -25,8 +25,8 @@ body {
     position: fixed;
 }
 
-/*Div criada para mexer na caixa de Especialidade Desejada até CRO*/
-.inputs {
+/* Selects e abas do inputs até CRO profissional*/
+.inputs-top {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,14 +34,13 @@ body {
     margin: 15px;
 }
 
-.inputs label{
-   margin-top: 5px;
+.inputs-top p{
+    margin-top: 10px;
 }
 
 .selects {
     padding: 5px;
-    margin: 2px;
-    width: 76%;
+    width: 250px;
     background: transparent;
     color: white;
 }
@@ -50,6 +49,7 @@ body {
     color: blue;
 }
 
+/* alteração para todos os inputs da página*/
 input{
     background: transparent;
     border: 1px solid #ccc;
@@ -63,21 +63,40 @@ input::placeholder{
     color: #c9ada7;
 }
 
-/*Classes dos labels na página*/
+/*Classe de todos os labels*/
 .registro {
     padding: 2px;
-    margin: 1px;
+    margin-top: 10px;
 }
 
-/*Mexendo nos inputs de toda a página*/
-.input-registro, .input-endereço {
+/*inputs até CRO*/
+.input-registro {
     padding: 6px;
     width: 250px;
 }
 
+legend{
+    margin-top: 5px;
+}
+
+/*Caixa do endereço profissional*/
+.divisor{
+    display: flex;
+    text-align: center;
+    width:100%;
+    margin-top:10px;
+    padding: 10px;
+}
+
+/* inputs do endereço profissional*/
+.endereco-p{
+    padding: 10px;
+    width: 90%;
+}
+
+/*estilo do botão de imprimir*/
 .botao {
     padding: 12px 25px;   
-    margin-top: 10px;
     border-radius: 40px;
     margin-top: 15px;
     cursor: pointer;
@@ -111,54 +130,23 @@ input::placeholder{
     width: 100%;
 }
 
-/*Endereço Profissional*/
-legend{
-    margin-top: 2px;
-}
-
-/*Caixa do endereço profissional*/
-.divisor{
-    display: flex;
-    text-align: center;
-    width:100%;
-    margin-top:10px;
-    padding: 10px;
-}
-
-.endereco-p{
-    padding: 10px;
-    width: 90%;
-
-}
-
-/*colocando a div lado a lado*/
-.div1, .div2{
-    width: 50%;
-    margin: 5px;
-} 
-
 /*Formatação do texto da página*/
 main{
     color: black;
-    margin: 20px;
     text-align: justify;
     font-size: 13.1px;
     font-family:Calibri;
-}
-
-/*Classe criada para definir a formatação da página após clicar no 'Gerar Contrato' substituindo a main*/
-.formatar{
-    height: 700px;
     width: 1122px;
 }
 
+/*Deixa o texto na parte esquerda ocupando os 40% da página inicial*/
 #on-off{
     margin-left: 40%;
 }
 
 .imagem-contrato{
     width: 100%;
-    height: 130px;   
+    height: 120px;   
 }
 
 .titulo-contrato{
@@ -168,14 +156,13 @@ main{
     font-weight: 700;
 }
 
-/*Div que envolve todo o texto da página*/
-.texto{
-    width: 87%;
+.texto-p1{
     margin-left: 60px;
+    width: 87%;
 }
 
 /*rodapé da 1° página do contrato*/
-.foter{
+.footer-p1{
     width: 100%;
     z-index: -1;
     height: 60px;
