@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="mascara/jquery-1.2.6.pack.js"></script>
     <script type="text/javascript" src="mascara/jquery.maskedinput-1.1.4.pack.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <!--Função para mascarar o CPF-->
 <script type="text/javascript" defer>
@@ -18,10 +19,15 @@
         $("#cpf_profissional").mask("999.999.999-99")
     })
 </script>
+
 </head>
 
 <body>
     <div id="conteiner">
+
+        <script>
+            swal("Atenção, por favor!", "Ao selecionar  ou errar uma especialidade, caso queira selecionar novamente outra especialidade, deve ser primeiro dado o F5 na página para atualizar as informações");
+        </script>
 
         <div class="inputs-top">
             <img src="Imagens/Logo.webp">
@@ -33,11 +39,10 @@
                 <option value="orto">ORTODONTIA</option>
                 <option value="protese">PRÓTESE</option>
                 <option value="implante">IMPLANTODONTIA</option>
-                <option value="estetica">ESTÉTICA</option>
             </select>   
 
             <p>Clínica Desejada</p>
-            <select id="clinicas" class="selects" onclick="SelectAtualizado()">
+            <select id="clinicas" class="selects">
                 <option selected></option>
                 <option value="anil">ANIL</option>
                 <option value="caxias">CAXIAS</option>
@@ -178,8 +183,7 @@
                 </p>
 
                 <p>
-                <strong>PARÁGRAFO PRIMEIRO</strong> A sede do CONTRATANTE funcionará entre ____h____min e ____h____min de segunda-feira a
-                sexta-feira, e aos sábados entre ____h____min e ____h____min, cabendo exclusivamente ao(à) CONTRATADO(A) a organização de sua agenda, horário de trabalho e de atendimentos.
+                <strong>PARÁGRAFO PRIMEIRO</strong> A sede do CONTRATANTE funcionará de segunda a sábado, cabendo exclusivamente ao(à) CONTRATADO(A) a organização de sua agenda, horário de trabalho e de atendimentos.
                 </p>
 
                 <p>
@@ -249,10 +253,12 @@
             </p>
             
             <!--Texto que é substituido ao selecionar a especialidade-->
-            <p id="desaparecer">
-            <strong>CLÁUSULA 09 – DOS VALORES DOS PROCEDIMENTOS</strong> Caberá ao(à) CONTRATADO(A) definir os valores relativos a cada procedimento odontológico.
-            
-            <p><strong>PARÁGRAFO PRIMEIRO</strong> Os pagamentos relativos aos procedimentos serão realizados pelos clientes diretamente ao CONTRATANTE que, após a retirada de seu percentual, passará o remanescente ao(à) CONTRATADO(A).</p>
+            <p>
+            <strong>CLÁUSULA 09 – DOS VALORES DOS PROCEDIMENTOS</strong> <span id="desaparecer">Caberá ao(à) CONTRATADO(A) definir os valores relativos a cada procedimento odontológico.</span>
+                    <br>
+            <strong id="protetico-P2">PARÁGRAFO SEGUNDO</strong><span id="adicionar-protetico"></span>
+           
+            <p id="paragrafo-clinico"><strong id="p-fixo">PARÁGRAFO PRIMEIRO</strong> Os pagamentos relativos aos procedimentos serão realizados pelos clientes diretamente ao CONTRATANTE que, após a retirada de seu percentual, passará o remanescente ao(à) CONTRATADO(A).</p>
             </p>
 
             <p>
@@ -307,9 +313,9 @@
     </main>
 
     <script type="module" src="script.js" defer></script>
-    <script src="TempoReal.js" defer></script>
-    <script src="teste.js"></script>
-    <script src="alterar.js" defer></script>
+    <script src="Js/TempoReal.js" defer></script>
+    <script src="Js/alterar.js" defer></script>
+    
 </body>
 
 </html>

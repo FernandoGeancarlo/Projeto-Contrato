@@ -323,6 +323,7 @@ function GerarContrato() {
     campoCRO.innerHTML   = (CRO); 
     CampoEndereco.innerHTML  = (Bairro + ", " + Logradouro + ", " + Numero + ", " + Complemento);
 
+    //desativa a aba de informações
     let formulario = document.getElementById("conteiner");
     formulario.style.display="none";
 
