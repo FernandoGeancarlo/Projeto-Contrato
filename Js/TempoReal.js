@@ -21,9 +21,9 @@ let Bairro = document.querySelector("#bairro");
 let Logradouro = document.querySelector("#logradouro");
 let Numero = document.querySelector("#numero");
 let Complemento = document.querySelector("#complemento");
-let div = document.querySelector("#div00");
+let endereco_p = document.querySelector(".grid-endereco_profissional");
 let mostrarEndereco = document.querySelector("#endereco-profissional");
-div.addEventListener('keyup', () => {
+endereco_p.addEventListener('keyup', () => {
     mostrarEndereco.innerHTML = Bairro.value + ", " + Logradouro.value + ", " + Numero.value + ", " + Complemento.value});
 
 

@@ -25,23 +25,16 @@
 <body>
     <div id="conteiner">
 
-        <script>
-            swal("Atenção, por favor!", "Ao selecionar  ou errar uma especialidade, caso queira selecionar novamente outra especialidade, deve ser primeiro dado o F5 na página para atualizar as informações");
-        </script>
-
-        <div class="inputs-top">
-            <img src="Imagens/Logo.webp">
-
-             <p>Especialidade Desejada</p>
+        <div class="div-especialidade-clinica">
+            <label for="especialidade">Especialidade Desejada</label>
             <select id="especialidade" class="selects">
                 <option selected></option>
                 <option value="clinico">CLINICO GERAL</option>
                 <option value="orto">ORTODONTIA</option>
                 <option value="protese">PRÓTESE</option>
                 <option value="implante">IMPLANTODONTIA</option>
-            </select>   
-
-            <p>Clínica Desejada</p>
+            </select>
+          <label for="clinicas">Clinica Desejada</label>
             <select id="clinicas" class="selects">
                 <option selected></option>
                 <option value="anil">ANIL</option>
@@ -99,38 +92,80 @@
                 <option value="novo-repartimento">NOVO REPARTIMENTO</option>
                 <option value="campina-grandec1">CAMPINA GRANDE CENTRO</option>
             </select>
+        </div>
 
-            <label for="nome_profissional" class="registro">Nome do profissional</label>
-            <input id="nome_profissional" class="input-registro" type="text" required
-                placeholder="Ex: Fernando Geancarlo Araujo Oliveira">
+        <section>
+            <form class="form">
+                <label for="nome_profissional" class="registro">Nome do profissional</label>
+                <input id="nome_profissional" class="input-registro" type="text" required
+            placeholder="Ex: Fernando Geancarlo Araujo Oliveira">
 
             <label for="cpf_profissional" class="registro">Informe o CPF do profissional</label>
-            <input id="cpf_profissional" class="input-registro" type="text" autocomplete="off" placeholder="Ex: 555.444.333-22" maxlength="14">
-
+            <input id="cpf_profissional" class="input-registro" type="text" required autocomplete="off" placeholder="Ex: 555.444.333-22" maxlength="14">
+    
             <label for="cro_profissional" class="registro">CRO (Caso tenha):</label>
-            <input id="cro_profissional" class="input-registro" type="text" required placeholder="CRO-MA:5555" maxlength="12">
-        </div>
+            <input id="cro_profissional" class="input-registro" type="text" placeholder="CRO-MA:5555" maxlength="12">
+            
+            <br>  <legend>Endereço Profissional</legend>
 
-            <legend>Endereço Profissional</legend>
-        <!--div00 faz parte do js para mostrar o que está sendo digitado em tempo real-->
-        <div id="div00" class="divisor">
-            <div>
-                <label for="bairro" class="registro">Bairro</label>
-                <input id="bairro" class="endereco-p" type="text" required placeholder="Ex:Jardim Dourado">
-
-                <label for="logradouro" class="registro">Logradouro</label>
-                <input id="logradouro" class="endereco-p" type="text" required placeholder="Ex:Rua fulano de tal">
-            </div>
-                <div>
-                <label for="numero" class="registro">N°/APT</label>
-                <input id="numero" class="endereco-p" type="text" required placeholder="Ex:n°706 ou Apt 702">
-
-                <label for="complemento" class="registro">Complemento</label>
-                <input id="complemento" class="endereco-p" type="text" required placeholder="Quadra 32 ou Torre 5">
+            <div class="grid-endereco_profissional">
+                <div class="grid-info_p">
+                    <label for="bairro" class="registro">Bairro</label>
+                    <input id="bairro" class="endereco-p" type="text" required placeholder="Ex:Jardim Dourado"> 
                 </div>
-        </div>
-
-        <button id="botao" class="botao bt1" type="submit">Imprimir</button>
+                <div class="grid-info_p">
+                    <label for="logradouro" class="registro">Logradouro</label>
+                    <input id="logradouro" class="endereco-p" type="text" required placeholder="Ex:Rua fulano de tal">
+                </div>
+                <div class="grid-info_p">
+                    <label for="numero" class="registro">N°/APT</label>
+                    <input id="numero" class="endereco-p" type="text" required placeholder="Ex:n°706 ou Apt 702">
+                </div>
+                <div class="grid-info_p">
+                    <label for="complemento" class="registro">Complemento</label>
+                    <input class="endereco-p" id="complemento" type="text" required placeholder="Quadra 32 ou Torre 5">
+                </div>
+                <div class="grid-info_p">
+                    <label for="municipio-estado">Cidade</label>
+                    <input class="endereco-p" id="municipio-estado" type="text" required placeholder="Ex: São Luis">
+                </div> 
+                <div class="grid-info_p">
+                    <label for="uf">UF</label>
+                        <select id="uf" required>
+                        <option value="">AC</option>
+                        <option value="">AL</option>
+                        <option value="">AP</option>
+                        <option value="">AM</option>
+                        <option value="">BA</option>
+                        <option value="">CE</option>
+                        <option value="">ES</option>
+                        <option value="">GO</option>
+                        <option value="">MA</option>
+                        <option value="">MT</option>
+                        <option value="">MS</option>
+                        <option value="">MG</option>
+                        <option value="">PA</option>
+                        <option value="">PB</option>
+                        <option value="">PR</option>
+                        <option value="">PE</option>
+                        <option value="">PI</option>
+                        <option value="">RJ</option>
+                        <option value="">RN</option>
+                        <option value="">RS</option>
+                        <option value="">RO</option>
+                        <option value="">RR</option>
+                        <option value="">SC</option>
+                        <option value="">SP</option>
+                        <option value="">SE</option>
+                        <option value="">TO</option>
+                        <option value="">DF</option>
+                        </select>
+                </div>
+            </div>
+                
+                <button id="botao" class="botao bt1" type="submit">Imprimir</button>
+            </form>
+        </section>
 
         </div>
  
