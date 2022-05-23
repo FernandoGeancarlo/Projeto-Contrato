@@ -485,7 +485,7 @@ function GerarContrato() {
   campoCPF.innerHTML = cpfProfissional;
   campoCRO.innerHTML = CRO;
   CampoEndereco.innerHTML = Bairro + ', ' + Logradouro + ', ' + Numero + ', ' + Complemento + ', ' + Cidade;
-  UF.innerHTML = municipio;
+  UF.innerHTML = municipio ;
 
   //desativa a aba de informações
   let formulario = document.getElementById('conteiner')
