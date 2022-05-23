@@ -94,7 +94,6 @@
             </select>
         </div>
 
-        <section>
             <form class="form">
                 <label for="nome_profissional" class="registro">Nome do profissional</label>
                 <input id="nome_profissional" class="input-registro" type="text" required
@@ -108,65 +107,63 @@
             
             <br>  <legend>Endereço Profissional</legend>
 
-            <div class="grid-endereco_profissional">
-                <div class="grid-info_p">
-                    <label for="bairro" class="registro">Bairro</label>
-                    <input id="bairro" class="endereco-p" type="text" required placeholder="Ex:Jardim Dourado"> 
+            <div class="div-enderecoP">
+                <div class="div-bairro-logradouro">
+                <label for="bairro" class="registro">Bairro</label>
+                <input id="bairro" class="endereco-p" type="text" required placeholder="Ex:Jardim Dourado">
+
+                <label for="logradouro" class="registro">Logradouro</label>
+                <input id="logradouro" class="endereco-p" type="text" required placeholder="Ex:Rua fulano de tal">
                 </div>
-                <div class="grid-info_p">
-                    <label for="logradouro" class="registro">Logradouro</label>
-                    <input id="logradouro" class="endereco-p" type="text" required placeholder="Ex:Rua fulano de tal">
+
+                <div class="div-numero-complemento">
+                <label for="numero" class="registro">N°/APT</label>
+                <input id="numero" class="endereco-p" type="text" required placeholder="Ex:n°706 ou Apt 702">
+
+                <label for="complemento" class="registro">Complemento</label>
+                <input class="endereco-p" id="complemento" type="text" required placeholder="Quadra 32 ou Torre 5">
                 </div>
-                <div class="grid-info_p">
-                    <label for="numero" class="registro">N°/APT</label>
-                    <input id="numero" class="endereco-p" type="text" required placeholder="Ex:n°706 ou Apt 702">
-                </div>
-                <div class="grid-info_p">
-                    <label for="complemento" class="registro">Complemento</label>
-                    <input class="endereco-p" id="complemento" type="text" required placeholder="Quadra 32 ou Torre 5">
-                </div>
-                <div class="grid-info_p">
-                    <label for="municipio-estado">Cidade</label>
-                    <input class="endereco-p" id="municipio-estado" type="text" required placeholder="Ex: São Luis">
-                </div> 
-                <div class="grid-info_p">
+                
+                <div class="div-cidade-uf">
+                <label for="cidade">Cidade</label>
+                <input class="endereco-p" id="cidade" type="text" required placeholder="Ex: São Luis">
+
                     <label for="uf">UF</label>
-                        <select id="uf" required>
-                        <option value="">AC</option>
-                        <option value="">AL</option>
-                        <option value="">AP</option>
-                        <option value="">AM</option>
-                        <option value="">BA</option>
-                        <option value="">CE</option>
-                        <option value="">ES</option>
-                        <option value="">GO</option>
-                        <option value="">MA</option>
-                        <option value="">MT</option>
-                        <option value="">MS</option>
-                        <option value="">MG</option>
-                        <option value="">PA</option>
-                        <option value="">PB</option>
-                        <option value="">PR</option>
-                        <option value="">PE</option>
-                        <option value="">PI</option>
-                        <option value="">RJ</option>
-                        <option value="">RN</option>
-                        <option value="">RS</option>
-                        <option value="">RO</option>
-                        <option value="">RR</option>
-                        <option value="">SC</option>
-                        <option value="">SP</option>
-                        <option value="">SE</option>
-                        <option value="">TO</option>
-                        <option value="">DF</option>
-                        </select>
+                    <select id="uf" required>
+                    <option selected></option>
+                    <option value="">AC</option>
+                    <option value="">AL</option>
+                    <option value="">AP</option>
+                    <option value="">AM</option>
+                    <option value="">BA</option>
+                    <option value="">CE</option>
+                    <option value="">ES</option>
+                    <option value="">GO</option>
+                    <option value="">MA</option>
+                    <option value="">MT</option>
+                    <option value="">MS</option>
+                    <option value="">MG</option>
+                    <option value="">PA</option>
+                    <option value="">PB</option>
+                    <option value="">PR</option>
+                    <option value="">PE</option>
+                    <option value="">PI</option>
+                    <option value="">RJ</option>
+                    <option value="">RN</option>
+                    <option value="">RS</option>
+                    <option value="">RO</option>
+                    <option value="">RR</option>
+                    <option value="">SC</option>
+                    <option value="">SP</option>
+                    <option value="">SE</option>
+                    <option value="">TO</option>
+                    <option value="">DF</option>
+                    </select>
                 </div>
             </div>
-                
+            
                 <button id="botao" class="botao bt1" type="submit">Imprimir</button>
             </form>
-        </section>
-
         </div>
  
     <main id="on-off">
@@ -189,7 +186,7 @@
 
                 <span id="cro-profissional">________</span> residente e domiciliado (a) na
 
-                <span id="endereco-profissional">______________________________________________________________</span>
+                <span id="endereco-profissional">______________________________________________________________</span> - <strong><span id="id-municipio"></span></strong>
                 indicado como CONTRATADO(A), têm entre si justo e acertado o presente contrato de prestação de serviço de
                 autônomo, que regerá toda a relação ora formalizada.
 
