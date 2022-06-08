@@ -438,7 +438,7 @@ let botao = document.getElementById('botao')
 botao.addEventListener('click', GerarContrato)
 
 //Função para adicionar os dados preenchidos no contrato
-function GerarContrato() {
+function GerarContrato(evt) {
   let select = document.getElementById('clinicas')
   let texto = select.options[select.selectedIndex].text
   let nomeClinica = document.querySelector('#nome-clinica')
@@ -481,11 +481,20 @@ function GerarContrato() {
   let municipio = selectorM.options[selectorM.selectedIndex].text
   let UF = document.querySelector('#id-municipio')
 
-  campoProfissional.innerHTML = nomeProfissional; //Insere o que foi pego dentro do HTML
-  campoCPF.innerHTML = cpfProfissional;
-  campoCRO.innerHTML = CRO;
-  CampoEndereco.innerHTML = Bairro + ', ' + Logradouro + ', ' + Numero + ', ' + Complemento + ', ' + Cidade;
-  UF.innerHTML = municipio ;
+  campoProfissional.innerHTML = nomeProfissional //Insere o que foi pego dentro do HTML
+  campoCPF.innerHTML = cpfProfissional
+  campoCRO.innerHTML = CRO
+  CampoEndereco.innerHTML =
+    Bairro +
+    ', ' +
+    Logradouro +
+    ', ' +
+    Numero +
+    ', ' +
+    Complemento +
+    ', ' +
+    Cidade
+  UF.innerHTML = municipio
 
   //desativa a aba de informações
   let formulario = document.getElementById('conteiner')
@@ -496,5 +505,6 @@ function GerarContrato() {
   desativar.style.margin = 'auto'
 
   //print e imprime
+  evt.preventDefault()
   window.print()
 }
