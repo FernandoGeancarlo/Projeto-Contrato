@@ -435,10 +435,8 @@ let clinica = [
 
 let botao = document.getElementById('botao')
 
-botao.addEventListener('click', GerarContrato)
-
 //Função para adicionar os dados preenchidos no contrato
-function GerarContrato(evt) {
+function GerarContrato() {
   let select = document.getElementById('clinicas')
   let texto = select.options[select.selectedIndex].text
   let nomeClinica = document.querySelector('#nome-clinica')
@@ -505,6 +503,5 @@ function GerarContrato(evt) {
   desativar.style.margin = 'auto'
 
   //print e imprime
-  evt.preventDefault()
   window.print()
 }
