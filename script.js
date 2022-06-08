@@ -433,10 +433,17 @@ let clinica = [
   }
 ]
 
-let botao = document.getElementById('botao')
+var inputs = $('input').on('keyup', verificarInputs)
+function verificarInputs() {
+  const preenchidos = inputs.get().every(({ value }) => value)
 
-//Função para adicionar os dados preenchidos no contrato
-function GerarContrato(evt) {
+  $('button').prop('disabled', !preenchidos)
+}
+
+var botao = document.querySelector('#botao')
+botao.addEventListener('click', GerarContrato)
+
+function GerarContrato() {
   let select = document.getElementById('clinicas')
   let texto = select.options[select.selectedIndex].text
   let nomeClinica = document.querySelector('#nome-clinica')
@@ -452,56 +459,20 @@ function GerarContrato(evt) {
     }
   }
 
-  // Pega o dado informado no campo ''Nome do profissional''
-  let nomeProfissional = document.getElementById('nome_profissional').value
-  // Refereciando o campo Nome do profissional para ser preenchido na 1° página do contrato
-  let campoProfissional = document.getElementById('nome-profissional')
-
-  //Pega o dado infomado no campo ''CPF do Profissional''
-  let cpfProfissional = document.getElementById('cpf_profissional').value
-  //Referencia o campo CPF profissional para ser preenchido na 1° págian do contrato
-  let campoCPF = document.getElementById('cpf-profissional')
-
-  //Pega o dado informado no CRO do profissional
-  let CRO = document.getElementById('cro_profissional').value
-  //Referencia o campo do CRO profissional na 1°página do contrato
-  let campoCRO = document.getElementById('cro-profissional')
-
-  //Pega os dados de Bairro, Logradouro, N°APT e Complemento informados
-  let Bairro = document.getElementById('bairro').value
-  let Logradouro = document.getElementById('logradouro').value
-  let Numero = document.getElementById('numero').value
-  let Complemento = document.getElementById('complemento').value
-  let Cidade = document.querySelector('#cidade').value
-  //Referencia o campo endereço na 1° página do contrato
-  let CampoEndereco = document.getElementById('endereco-profissional')
   let selectorM = document.querySelector('#uf')
   let municipio = selectorM.options[selectorM.selectedIndex].text
   let UF = document.querySelector('#id-municipio')
-
-  campoProfissional.innerHTML = nomeProfissional //Insere o que foi pego dentro do HTML
-  campoCPF.innerHTML = cpfProfissional
-  campoCRO.innerHTML = CRO
-  CampoEndereco.innerHTML =
-    Bairro +
-    ', ' +
-    Logradouro +
-    ', ' +
-    Numero +
-    ', ' +
-    Complemento +
-    ', ' +
-    Cidade
-  UF.innerHTML = municipio
+  UF.innerHTML = municipio;
+  
 
   //desativa a aba de informações
   let formulario = document.getElementById('conteiner')
   formulario.style.display = 'none'
-
   //Centraliza o texto após o click de imprimir
   let desativar = document.getElementById('on-off')
   desativar.style.margin = 'auto'
 
   //print e imprime
+
   window.print()
 }

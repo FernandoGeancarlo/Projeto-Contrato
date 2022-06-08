@@ -15,13 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;700&display=swap"
       rel="stylesheet"
     />
-    <script type="text/javascript" src="mascara/jquery-1.2.6.pack.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script
       type="text/javascript"
       src="mascara/jquery.maskedinput-1.1.4.pack.js"
     ></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
     <!--Função para mascarar o CPF-->
     <script type="text/javascript" defer>
       $(document).ready(function () {
@@ -133,6 +131,7 @@
           type="text"
           placeholder="CRO-MA:5555"
           maxlength="12"
+          value="CRO/"
         />
 
         <br />
@@ -222,8 +221,9 @@
             </select>
           </div>
         </div>
-
-        <button id="botao" class="botao bt1" type="submit">Imprimir</button>
+        <button id="botao" class="botao bt1" type="button" disabled="disabled">
+          Imprimir
+        </button>
       </form>
     </div>
 
@@ -235,9 +235,7 @@
             src="Imagens/cabeçalho.png"
             alt="Imagem Contrato"
           />
-          <h4 class="titulo-contrato">
-            
-          </h4>
+          <h4 class="titulo-contrato"></h4>
 
           <div class="texto-p1">
             <label
@@ -258,8 +256,8 @@
             <span id="cpf-profissional">________________________</span>,
             INSCRITO (A) NO
 
-            <span id="cro-profissional">________</span> residente e domiciliado
-            (a) na
+            <span id="cro-profissional">CRO/___:_____</span> residente e
+            domiciliado (a) na
 
             <span id="endereco-profissional"
               >______________________________________________________________</span
