@@ -1,353 +1,527 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Contrato DNTBRAS</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" type="imagem/png" href="Imagens/Logo-Login-DentistasBrasil.png" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="icon"
+      type="imagem/png"
+      href="Imagens/Logo-Login-DentistasBrasil.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script type="text/javascript" src="mascara/jquery-1.2.6.pack.js"></script>
-    <script type="text/javascript" src="mascara/jquery.maskedinput-1.1.4.pack.js"></script>
+    <script
+      type="text/javascript"
+      src="mascara/jquery.maskedinput-1.1.4.pack.js"
+    ></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-<!--Função para mascarar o CPF-->
-<script type="text/javascript" defer>
-    $(document).ready(function(){
-        $("#cpf_profissional").mask("999.999.999-99")
-    })
-</script>
+    <!--Função para mascarar o CPF-->
+    <script type="text/javascript" defer>
+      $(document).ready(function () {
+        $('#cpf_profissional').mask('999.999.999-99')
+      })
+    </script>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div id="conteiner">
+      <div class="div-especialidade-clinica">
+        <label for="especialidade">Especialidade Desejada</label>
+        <select id="especialidade" class="selects">
+          <option selected></option>
+          <option value="clinico">CLINICO GERAL</option>
+          <option value="orto">ORTODONTIA</option>
+          <option value="protese">PRÓTESE</option>
+          <option value="implante">IMPLANTODONTIA</option>
+        </select>
+        <label for="clinicas">Clinica Desejada</label>
+        <select id="clinicas" class="selects">
+          <option selected></option>
+          <option value="anil">ANIL</option>
+          <option value="caxias">CAXIAS</option>
+          <option value="rua-grande">RUA GRANDE</option>
+          <option value="cohab">COHAB</option>
+          <option value="deodoro">DEODORO</option>
+          <option value="imperatriz">IMPERATRIZ</option>
+          <option value="jpc1">JOÃO PAULO C1</option>
+          <option value="jpc2">JOÃO PAULO C2</option>
+          <option value="jpc3">JOÃO PAULO C3</option>
+          <option value="jardim-america">JARDIM AMERICA</option>
+          <option value="sao-bernardo">SÃO BERNARDO</option>
+          <option value="sao-cristovao">SÃO CRISTOVÃO</option>
+          <option value="timon">TIMON</option>
+          <option value="presidente-dutra">PRESIDENTE DUTRA</option>
+          <option value="santa-ines">SANTA INES</option>
+          <option value="parnaiba">PARNAIBA</option>
+          <option value="piripiri">PIRIPIRI</option>
+          <option value="teresinac1">TERESINA C1</option>
+          <option value="teresinac2">TERESINA C2</option>
+          <option value="teresinac3">TERESINA C3</option>
+          <option value="teresinac4">TERESINA C4</option>
+          <option value="teresinac5">TERESINA C5</option>
+          <option value="teresinac6">TERESINA C6</option>
+          <option value="cajazeiras">CAJAZEIRAS</option>
+          <option value="sousa">SOUSA</option>
+          <option value="ceilandia">CEILANDIA</option>
+          <option value="samambaia">SAMAMBAIA</option>
+          <option value="roraimac1">RORAIMA C1</option>
+          <option value="roraimac2">RORAIMA C2</option>
+          <option value="roraimac3">RORAIMA C3</option>
+          <option value="recifec1">RECIFE C1</option>
+          <option value="recifec2">RECIFE C2</option>
+          <option value="recifec3">RECIFE C3</option>
+          <option value="juiz-de-fora">JUIZ DE FORA</option>
+          <option value="belo-horizonte">BELO HORIZONTE</option>
+          <option value="belemc1">BELEM C1</option>
+          <option value="belemc2">BELEM C2</option>
+          <option value="guama">GUAMA</option>
+          <option value="macapa">MACAPA</option>
+          <option value="ceara-mirim">CEARA MIRIM</option>
+          <option value="maceio-centro">MACEIO CENTRO</option>
+          <option value="maceio-benedito">MACEIO BENEDITO</option>
+          <option value="paraisoc1">PARAISO C1</option>
+          <option value="paraisoc2">PARAISO C2</option>
+          <option value="estreito">ESTREITO</option>
+          <option value="porto-nacional">PORTO NACIONAL</option>
+          <option value="araguaina">ARAGUAINA</option>
+          <option value="varzea-grande">VARZEA GRANDE</option>
+          <option value="santana">SANTANA</option>
+          <option value="joao-camara">JOÃO CAMARA</option>
+          <option value="campos-sales">CAMPOS SALES</option>
+          <option value="santo-andre">SANTO ANDRE</option>
+          <option value="novo-repartimento">NOVO REPARTIMENTO</option>
+          <option value="campina-grandec1">CAMPINA GRANDE CENTRO</option>
+        </select>
+      </div>
 
-        <div class="div-especialidade-clinica">
-            <label for="especialidade">Especialidade Desejada</label>
-            <select id="especialidade" class="selects">
-                <option selected></option>
-                <option value="clinico">CLINICO GERAL</option>
-                <option value="orto">ORTODONTIA</option>
-                <option value="protese">PRÓTESE</option>
-                <option value="implante">IMPLANTODONTIA</option>
+      <form class="form">
+        <label for="nome_profissional" class="registro"
+          >Nome do profissional</label
+        >
+        <input
+          id="nome_profissional"
+          class="input-registro"
+          type="text"
+          required
+          placeholder="Ex: Fernando Geancarlo Araujo Oliveira"
+        />
+
+        <label for="cpf_profissional" class="registro"
+          >Informe o CPF do profissional</label
+        >
+        <input
+          id="cpf_profissional"
+          class="input-registro"
+          type="text"
+          required
+          autocomplete="off"
+          placeholder="Ex: 555.444.333-22"
+          maxlength="14"
+        />
+
+        <label for="cro_profissional" class="registro">CRO (Caso tenha):</label>
+        <input
+          id="cro_profissional"
+          class="input-registro"
+          type="text"
+          placeholder="CRO-MA:5555"
+          maxlength="12"
+        />
+
+        <br />
+        <legend>Endereço Profissional</legend>
+
+        <div class="div-enderecoP">
+          <div class="div-bairro-logradouro">
+            <label for="bairro" class="registro">Bairro</label>
+            <input
+              id="bairro"
+              class="endereco-p"
+              type="text"
+              required
+              placeholder="Ex:Jardim Dourado"
+            />
+
+            <label for="logradouro" class="registro">Logradouro</label>
+            <input
+              id="logradouro"
+              class="endereco-p"
+              type="text"
+              required
+              placeholder="Ex:Rua fulano de tal"
+            />
+          </div>
+
+          <div class="div-numero-complemento">
+            <label for="numero" class="registro">N°/APT</label>
+            <input
+              id="numero"
+              class="endereco-p"
+              type="text"
+              required
+              placeholder="Ex:n°706 ou Apt 702"
+            />
+
+            <label for="complemento" class="registro">Complemento</label>
+            <input
+              class="endereco-p"
+              id="complemento"
+              type="text"
+              required
+              placeholder="Quadra 32 ou Torre 5"
+            />
+          </div>
+
+          <div class="div-cidade-uf">
+            <label for="cidade">Cidade</label>
+            <input
+              class="endereco-p"
+              id="cidade"
+              type="text"
+              required
+              placeholder="Ex: São Luis"
+            />
+
+            <label for="uf">UF</label>
+            <select id="uf" required>
+              <option selected></option>
+              <option value="">AC</option>
+              <option value="">AL</option>
+              <option value="">AP</option>
+              <option value="">AM</option>
+              <option value="">BA</option>
+              <option value="">CE</option>
+              <option value="">ES</option>
+              <option value="">GO</option>
+              <option value="">MA</option>
+              <option value="">MT</option>
+              <option value="">MS</option>
+              <option value="">MG</option>
+              <option value="">PA</option>
+              <option value="">PB</option>
+              <option value="">PR</option>
+              <option value="">PE</option>
+              <option value="">PI</option>
+              <option value="">RJ</option>
+              <option value="">RN</option>
+              <option value="">RS</option>
+              <option value="">RO</option>
+              <option value="">RR</option>
+              <option value="">SC</option>
+              <option value="">SP</option>
+              <option value="">SE</option>
+              <option value="">TO</option>
+              <option value="">DF</option>
             </select>
-          <label for="clinicas">Clinica Desejada</label>
-            <select id="clinicas" class="selects">
-                <option selected></option>
-                <option value="anil">ANIL</option>
-                <option value="caxias">CAXIAS</option>
-                <option value="rua-grande">RUA GRANDE</option>
-                <option value="cohab">COHAB</option>
-                <option value="deodoro">DEODORO</option>
-                <option value="imperatriz">IMPERATRIZ</option>
-                <option value="jpc1">JOÃO PAULO C1</option>
-                <option value="jpc2">JOÃO PAULO C2</option>
-                <option value="jpc3">JOÃO PAULO C3</option>
-                <option value="jardim-america">JARDIM AMERICA</option>
-                <option value="sao-bernardo">SÃO BERNARDO</option>
-                <option value="sao-cristovao">SÃO CRISTOVÃO</option>
-                <option value="timon">TIMON</option>
-                <option value="presidente-dutra">PRESIDENTE DUTRA</option>
-                <option value="santa-ines">SANTA INES</option>
-                <option value="parnaiba">PARNAIBA</option>
-                <option value="piripiri">PIRIPIRI</option>
-                <option value="teresinac1">TERESINA C1</option>
-                <option value="teresinac2">TERESINA C2</option>
-                <option value="teresinac3">TERESINA C3</option>
-                <option value="teresinac4">TERESINA C4</option>
-                <option value="teresinac5">TERESINA C5</option>
-                <option value="teresinac6">TERESINA C6</option>
-                <option value="cajazeiras">CAJAZEIRAS</option>
-                <option value="sousa">SOUSA</option>
-                <option value="ceilandia">CEILANDIA</option>
-                <option value="samambaia">SAMAMBAIA</option>
-                <option value="roraimac1">RORAIMA C1</option>
-                <option value="roraimac2">RORAIMA C2</option>
-                <option value="roraimac3">RORAIMA C3</option>
-                <option value="recifec1">RECIFE C1</option>
-                <option value="recifec2">RECIFE C2</option>
-                <option value="recifec3">RECIFE C3</option>
-                <option value="juiz-de-fora">JUIZ DE FORA</option>
-                <option value="belo-horizonte">BELO HORIZONTE</option>
-                <option value="belemc1">BELEM C1</option>
-                <option value="belemc2">BELEM C2</option>
-                <option value="guama">GUAMA</option>
-                <option value="macapa">MACAPA</option>
-                <option value="ceara-mirim">CEARA MIRIM</option>
-                <option value="maceio-centro">MACEIO CENTRO</option>
-                <option value="maceio-benedito">MACEIO BENEDITO</option>
-                <option value="paraisoc1">PARAISO C1</option>
-                <option value="paraisoc2">PARAISO C2</option>
-                <option value="estreito">ESTREITO</option>
-                <option value="porto-nacional">PORTO NACIONAL</option>
-                <option value="araguaina">ARAGUAINA</option>
-                <option value="varzea-grande">VARZEA GRANDE</option>
-                <option value="santana">SANTANA</option>
-                <option value="joao-camara">JOÃO CAMARA</option>
-                <option value="campos-sales">CAMPOS SALES</option>
-                <option value="santo-andre">SANTO ANDRE</option>
-                <option value="novo-repartimento">NOVO REPARTIMENTO</option>
-                <option value="campina-grandec1">CAMPINA GRANDE CENTRO</option>
-            </select>
+          </div>
         </div>
 
-            <form class="form">
-                <label for="nome_profissional" class="registro">Nome do profissional</label>
-                <input id="nome_profissional" class="input-registro" type="text" required
-            placeholder="Ex: Fernando Geancarlo Araujo Oliveira">
+        <button id="botao" class="botao bt1" type="submit">Imprimir</button>
+      </form>
+    </div>
 
-            <label for="cpf_profissional" class="registro">Informe o CPF do profissional</label>
-            <input id="cpf_profissional" class="input-registro" type="text" required autocomplete="off" placeholder="Ex: 555.444.333-22" maxlength="14">
-    
-            <label for="cro_profissional" class="registro">CRO (Caso tenha):</label>
-            <input id="cro_profissional" class="input-registro" type="text" placeholder="CRO-MA:5555" maxlength="12">
-            
-            <br>  <legend>Endereço Profissional</legend>
-
-            <div class="div-enderecoP">
-                <div class="div-bairro-logradouro">
-                <label for="bairro" class="registro">Bairro</label>
-                <input id="bairro" class="endereco-p" type="text" required placeholder="Ex:Jardim Dourado">
-
-                <label for="logradouro" class="registro">Logradouro</label>
-                <input id="logradouro" class="endereco-p" type="text" required placeholder="Ex:Rua fulano de tal">
-                </div>
-
-                <div class="div-numero-complemento">
-                <label for="numero" class="registro">N°/APT</label>
-                <input id="numero" class="endereco-p" type="text" required placeholder="Ex:n°706 ou Apt 702">
-
-                <label for="complemento" class="registro">Complemento</label>
-                <input class="endereco-p" id="complemento" type="text" required placeholder="Quadra 32 ou Torre 5">
-                </div>
-                
-                <div class="div-cidade-uf">
-                <label for="cidade">Cidade</label>
-                <input class="endereco-p" id="cidade" type="text" required placeholder="Ex: São Luis">
-
-                    <label for="uf">UF</label>
-                    <select id="uf" required>
-                    <option selected></option>
-                    <option value="">AC</option>
-                    <option value="">AL</option>
-                    <option value="">AP</option>
-                    <option value="">AM</option>
-                    <option value="">BA</option>
-                    <option value="">CE</option>
-                    <option value="">ES</option>
-                    <option value="">GO</option>
-                    <option value="">MA</option>
-                    <option value="">MT</option>
-                    <option value="">MS</option>
-                    <option value="">MG</option>
-                    <option value="">PA</option>
-                    <option value="">PB</option>
-                    <option value="">PR</option>
-                    <option value="">PE</option>
-                    <option value="">PI</option>
-                    <option value="">RJ</option>
-                    <option value="">RN</option>
-                    <option value="">RS</option>
-                    <option value="">RO</option>
-                    <option value="">RR</option>
-                    <option value="">SC</option>
-                    <option value="">SP</option>
-                    <option value="">SE</option>
-                    <option value="">TO</option>
-                    <option value="">DF</option>
-                    </select>
-                </div>
-            </div>
-            
-                <button id="botao" class="botao bt1" type="submit">Imprimir</button>
-            </form>
-        </div>
- 
     <main id="on-off">
-        <div class="contrato">
-
-        <div class="pagina1">          
-            <img class="imagem-contrato" src="Imagens/cabeçalho.png" alt="Imagem Contrato">
-            <h4 class="titulo-contrato">CONTRATO DE PRESTAÇÃO DE SERVIÇO AUTÔNOMO DE CIRURGIÃO DENTISTA</h4>
-
-            <div class="texto-p1">
-                <label>Por meio do presente, as partes aqui indicadas, de um lado
-                <span id="nome-clinica">_____________________________</span>, 
-                CNPJ:<span id="cnpj-clinica">_________________</span> estabelecida na 
-                <span id="endereco-clinica">________________________________</span>
-                a seguir denominado como CONTRATANTE, e de outro</label>
-
-                <span id="nome-profissional">_____________________________________________________</span>, CPF:
-
-                <span id="cpf-profissional">________________________</span>, INSCRITO (A) NO
-
-                <span id="cro-profissional">________</span> residente e domiciliado (a) na
-
-                <span id="endereco-profissional">______________________________________________________________</span>-<strong><span id="id-municipio"></span></strong>
-                indicado como CONTRATADO(A), têm entre si justo e acertado o presente contrato de prestação de serviço de
-                autônomo, que regerá toda a relação ora formalizada.
-
-                <p>
-                <strong>CLÁUSULA 01 – OBJETO</strong> O presente contrato tem como objeto a prestação de serviços odontológicos pelo CONTRATADA, em sua área especializada de atuação, no estabelecimento comercial do CONTRATANTE.
-                </p>
-
-                <p>
-                <strong>CLÁUSULA 02 – PRAZO </strong> O presente contrato tem vigência a partir da data de assinatura do mesmo, com término em 6 (SEIS) meses a partir desta data.
-                </p>
-
-                <p>
-                <strong>CLÁUSULA 03 – RESCISÃO</strong> A rescisão ocorrerá a partir do interesse de qualquer das partes, facultado o prazo de 24 horas para comunicação.
-                </p>
-
-                <p>
-                <strong>PARÁGRAFO PRIMEIRO</strong> Findo o prazo do contrato de trabalho e não havendo a rescisão do mesmo, o contrato se prorroga automaticamente por prazo indeterminado.
-                </p>
-
-                <p>
-                <strong>PARÁGRAFO SEGUNDO</strong> Com a rescisão, o CONTRATANTE e o(a) CONTRATADO(A) poderão elaborar relatório de liquidação dos trabalhos pendentes de acerto, dando ciência e oportunizando o contraditório.
-                </p>
-
-                <p>
-                <strong>CLÁUSULA 04 – ATENDIMENTOS E HORÁRIOS DE TRABALHO</strong> Os atendimentos ocorrerão a partir do agendamento dos clientes do(a) CONTRATADO(A), podendo ser feitos pelo(a) mesmo(a) ou pelos seus clientes através do setor competente do CONTRATANTE.
-                </p>
-
-                <p>
-                <strong>PARÁGRAFO PRIMEIRO</strong> A sede do CONTRATANTE funcionará de segunda a sábado, cabendo exclusivamente ao(à) CONTRATADO(A) a organização de sua agenda, horário de trabalho e de atendimentos.
-                </p>
-
-                <p>
-                <strong>PARÁGRAFO SEGUNDO</strong> Fica convencionado entre as partes que os atendimentos deverão estar agendados junto ao CONTRATANTE com antecedência mínima de 24 (vinte e quatro) horas, a fim de potencializar o uso dos espaços físicos do CONTRATANTE, evitando também desconforto aos pacientes do(a) CONTRATADO(A) e dos demais profissionais.
-                </p>
-
-                <p>
-                <strong>CLÁUSULA 05 – DAS OBRIGAÇÕES DO CONTRATANTE</strong> O CONTRATANTE concederá o direito de uso de suas salas, equipamentos odontológicos, móveis, medicamentos e da força de trabalho de seus empregados a fim do melhor desenvolvimento das atividades profissionais do(a) CONTRATADO(A).
-                </p>
-
-                <p>
-                <strong>PARÁGRAFO PRIMEIRO</strong> Estarão disponíveis ao(à) CONTRATADO(A) funcionários para limpeza do consultório e da clínica em geral, ajudantes e recepcionistas, cujo pagamento será de responsabilidade do CONTRATANTE.
-                </p>
-
-                <p>
-                <strong>PARÁGRAFO SEGUNDO</strong> Caberá ao CONTRATANTE e/ou ao(à) CONTRATADO(A), a apresentação de relatório de produção e atendimentos, bem como os próprios pagamentos decorrentes de forma semanal.
-                </p>
-
-                <p>
-                <strong>PARÁGRAFO TERCEIRO</strong> É de responsabilidade também do CONTRATANTE a lidar com órgãos de fiscalização de todas
-                as áreas, sejam elas trabalhistas, fiscais, sanitárias e do conselho de classe no que diz empresa.
-                </p>
-
-                <p>
-                <strong>CLÁUSULA 06 – DAS OBRIGAÇÕES DO(A) CONTRATADO(A)</strong> O(A) CONTRATADO(A) se responsabilizará pelo material de seu uso pessoal, como motores de alta e baixa rotação, paramentação, brocas e outros materiais que entender necessários à complementação daqueles já existentes nos consultórios disponibilizados pelo CONTRATANTE.
-                </p>
-
-                <p>
-                <strong>PARÁGRAFO PRIMEIRO</strong> É do(a) CONTRATADO(A) a responsabilidade técnica pelos procedimentos clínicos que realiza, devendo o(a) mesmo(a) responder em eventuais casos de reclamações de seus pacientes por tratamentos realizados.
-                </p>
-
-                <p>
-                <strong>PARÁGRAFO SEGUNDO</strong> Caberá também ao(à) CONTRATADO(A) a apresentação do competente alvará para trabalho, bem como o cadastro junto ao município de atuação para emissão de notas fiscais e Recibos de Pagamento Autônomo.
-                </p>
-
-                <p>
-                <strong>CLÁUSULA 07 – DA POSSIBILIDADE DE SUBSTITUIÇÃO</strong> Caso o(a) CONTRATADO(A) não possa comparecer em oportunidade em que já estiver com atendimentos a serem realizados, tem a faculdade de se fazer substituir por profissional igualmente habilitado, de mesma capacidade técnica e especialidade, com inscrição no Conselho Regional de Odontologia e demais obrigações legais inerentes.
-                </p>
-                
-                <p>
-                <strong>CLÁUSULA 08 – DA INEXISTÊNCIA DE VÍNCULO EMPREGATÍCIO</strong> Não há vínculo empregatício na presente relação, com todas as cláusulas deste contrato convergindo nesse sentido, senão veja-se:
-                </p>
-
-                <p>
-                <strong>PARÁGRAFO PRIMEIRO – SUBORDINAÇÃO JURÍDICA </strong> O(A) CONTRATADO(A) realizará o procedimento clínico na forma prescrita pela formação no curso de Odontologia, fundamentada na melhor prática e literatura, sem ingerência do CONTRATANTE e seus prepostos, uma vez se tratar de trabalho técnico.
-                </p>
-            </div>
-
-                <img class="footer-p1" src="Imagens/rodape.png" alt="footer">
-
-            </div>
+      <div class="contrato">
+        <div class="pagina1">
+          <img
+            class="imagem-contrato"
+            src="Imagens/cabeçalho.png"
+            alt="Imagem Contrato"
+          />
+          <h4 class="titulo-contrato">
             
-            <div class="pagina2">   
-                <img class="imagem-contrato" src="Imagens/cabeçalho.png" alt="Imagem Contrato">
-            
-            <div class="texto-p2">
+          </h4>
+
+          <div class="texto-p1">
+            <label
+              >Por meio do presente, as partes aqui indicadas, de um lado
+              <span id="nome-clinica">_____________________________</span>,
+              CNPJ:<span id="cnpj-clinica">_________________</span> estabelecida
+              na
+              <span id="endereco-clinica"
+                >________________________________</span
+              >
+              a seguir denominado como CONTRATANTE, e de outro</label
+            >
+
+            <span id="nome-profissional"
+              >_____________________________________________________</span
+            >, CPF:
+
+            <span id="cpf-profissional">________________________</span>,
+            INSCRITO (A) NO
+
+            <span id="cro-profissional">________</span> residente e domiciliado
+            (a) na
+
+            <span id="endereco-profissional"
+              >______________________________________________________________</span
+            >-<strong><span id="id-municipio"></span></strong>
+            indicado como CONTRATADO(A), têm entre si justo e acertado o
+            presente contrato de prestação de serviço de autônomo, que regerá
+            toda a relação ora formalizada.
+
             <p>
-            <strong>PARÁGRAFO SEGUNDO – HABITUALIDADE </strong> O(A) CONTRATADO(A) não guarda com o CONTRATANTE obrigatoriedade de comparecimento periódico no local de trabalho, cabendo exclusivamente ao(à) CONTRATADO(A) o agendamento de seus atendimentos; ficando livre para se ausentar conforme seu entendimento, obedecendo apenas a programação realizada por ele(a) próprio(a).
+              <strong>CLÁUSULA 01 – OBJETO</strong> O presente contrato tem como
+              objeto a prestação de serviços odontológicos pelo CONTRATADA, em
+              sua área especializada de atuação, no estabelecimento comercial do
+              CONTRATANTE.
             </p>
 
             <p>
-            <strong>PARÁGRAFO TERCEIRO – PESSOALIDADE</strong> Na hipótese de agendamento de serviço odontológico e caso não possa comparecer por qualquer motivo, tem o(a) CONTRATADO(A) a faculdade de se fazer substituir por profissional de sua confiança.
+              <strong>CLÁUSULA 02 – PRAZO </strong> O presente contrato tem
+              vigência a partir da data de assinatura do mesmo, com término em 6
+              (SEIS) meses a partir desta data.
             </p>
 
             <p>
-            <strong>PARÁGRAFO QUARTO – ALTERIDADE</strong> Cabe ao(à) CONTRATADO(A) a responsabilidade e assunção dos riscos pelos procedimentos odontológicos por ela realizados, bem como a compra de materiais não fornecidos pelo CONTRATANTE necessários aos citados procedimentos.
+              <strong>CLÁUSULA 03 – RESCISÃO</strong> A rescisão ocorrerá a
+              partir do interesse de qualquer das partes, facultado o prazo de
+              24 horas para comunicação.
             </p>
-            
+
+            <p>
+              <strong>PARÁGRAFO PRIMEIRO</strong> Findo o prazo do contrato de
+              trabalho e não havendo a rescisão do mesmo, o contrato se prorroga
+              automaticamente por prazo indeterminado.
+            </p>
+
+            <p>
+              <strong>PARÁGRAFO SEGUNDO</strong> Com a rescisão, o CONTRATANTE e
+              o(a) CONTRATADO(A) poderão elaborar relatório de liquidação dos
+              trabalhos pendentes de acerto, dando ciência e oportunizando o
+              contraditório.
+            </p>
+
+            <p>
+              <strong>CLÁUSULA 04 – ATENDIMENTOS E HORÁRIOS DE TRABALHO</strong>
+              Os atendimentos ocorrerão a partir do agendamento dos clientes
+              do(a) CONTRATADO(A), podendo ser feitos pelo(a) mesmo(a) ou pelos
+              seus clientes através do setor competente do CONTRATANTE.
+            </p>
+
+            <p>
+              <strong>PARÁGRAFO PRIMEIRO</strong> A sede do CONTRATANTE
+              funcionará de segunda a sábado, cabendo exclusivamente ao(à)
+              CONTRATADO(A) a organização de sua agenda, horário de trabalho e
+              de atendimentos.
+            </p>
+
+            <p>
+              <strong>PARÁGRAFO SEGUNDO</strong> Fica convencionado entre as
+              partes que os atendimentos deverão estar agendados junto ao
+              CONTRATANTE com antecedência mínima de 24 (vinte e quatro) horas,
+              a fim de potencializar o uso dos espaços físicos do CONTRATANTE,
+              evitando também desconforto aos pacientes do(a) CONTRATADO(A) e
+              dos demais profissionais.
+            </p>
+
+            <p>
+              <strong>CLÁUSULA 05 – DAS OBRIGAÇÕES DO CONTRATANTE</strong> O
+              CONTRATANTE concederá o direito de uso de suas salas, equipamentos
+              odontológicos, móveis, medicamentos e da força de trabalho de seus
+              empregados a fim do melhor desenvolvimento das atividades
+              profissionais do(a) CONTRATADO(A).
+            </p>
+
+            <p>
+              <strong>PARÁGRAFO PRIMEIRO</strong> Estarão disponíveis ao(à)
+              CONTRATADO(A) funcionários para limpeza do consultório e da
+              clínica em geral, ajudantes e recepcionistas, cujo pagamento será
+              de responsabilidade do CONTRATANTE.
+            </p>
+
+            <p>
+              <strong>PARÁGRAFO SEGUNDO</strong> Caberá ao CONTRATANTE e/ou
+              ao(à) CONTRATADO(A), a apresentação de relatório de produção e
+              atendimentos, bem como os próprios pagamentos decorrentes de forma
+              semanal.
+            </p>
+
+            <p>
+              <strong>PARÁGRAFO TERCEIRO</strong> É de responsabilidade também
+              do CONTRATANTE a lidar com órgãos de fiscalização de todas as
+              áreas, sejam elas trabalhistas, fiscais, sanitárias e do conselho
+              de classe no que diz empresa.
+            </p>
+
+            <p>
+              <strong>CLÁUSULA 06 – DAS OBRIGAÇÕES DO(A) CONTRATADO(A)</strong>
+              O(A) CONTRATADO(A) se responsabilizará pelo material de seu uso
+              pessoal, como motores de alta e baixa rotação, paramentação,
+              brocas e outros materiais que entender necessários à
+              complementação daqueles já existentes nos consultórios
+              disponibilizados pelo CONTRATANTE.
+            </p>
+
+            <p>
+              <strong>PARÁGRAFO PRIMEIRO</strong> É do(a) CONTRATADO(A) a
+              responsabilidade técnica pelos procedimentos clínicos que realiza,
+              devendo o(a) mesmo(a) responder em eventuais casos de reclamações
+              de seus pacientes por tratamentos realizados.
+            </p>
+
+            <p>
+              <strong>PARÁGRAFO SEGUNDO</strong> Caberá também ao(à)
+              CONTRATADO(A) a apresentação do competente alvará para trabalho,
+              bem como o cadastro junto ao município de atuação para emissão de
+              notas fiscais e Recibos de Pagamento Autônomo.
+            </p>
+
+            <p>
+              <strong>CLÁUSULA 07 – DA POSSIBILIDADE DE SUBSTITUIÇÃO</strong>
+              Caso o(a) CONTRATADO(A) não possa comparecer em oportunidade em
+              que já estiver com atendimentos a serem realizados, tem a
+              faculdade de se fazer substituir por profissional igualmente
+              habilitado, de mesma capacidade técnica e especialidade, com
+              inscrição no Conselho Regional de Odontologia e demais obrigações
+              legais inerentes.
+            </p>
+
+            <p>
+              <strong
+                >CLÁUSULA 08 – DA INEXISTÊNCIA DE VÍNCULO EMPREGATÍCIO</strong
+              >
+              Não há vínculo empregatício na presente relação, com todas as
+              cláusulas deste contrato convergindo nesse sentido, senão veja-se:
+            </p>
+
+            <p>
+              <strong>PARÁGRAFO PRIMEIRO – SUBORDINAÇÃO JURÍDICA </strong> O(A)
+              CONTRATADO(A) realizará o procedimento clínico na forma prescrita
+              pela formação no curso de Odontologia, fundamentada na melhor
+              prática e literatura, sem ingerência do CONTRATANTE e seus
+              prepostos, uma vez se tratar de trabalho técnico.
+            </p>
+          </div>
+
+          <img class="footer-p1" src="Imagens/rodape.png" alt="footer" />
+        </div>
+
+        <div class="pagina2">
+          <img
+            class="imagem-contrato"
+            src="Imagens/cabeçalho.png"
+            alt="Imagem Contrato"
+          />
+
+          <div class="texto-p2">
+            <p>
+              <strong>PARÁGRAFO SEGUNDO – HABITUALIDADE </strong> O(A)
+              CONTRATADO(A) não guarda com o CONTRATANTE obrigatoriedade de
+              comparecimento periódico no local de trabalho, cabendo
+              exclusivamente ao(à) CONTRATADO(A) o agendamento de seus
+              atendimentos; ficando livre para se ausentar conforme seu
+              entendimento, obedecendo apenas a programação realizada por ele(a)
+              próprio(a).
+            </p>
+
+            <p>
+              <strong>PARÁGRAFO TERCEIRO – PESSOALIDADE</strong> Na hipótese de
+              agendamento de serviço odontológico e caso não possa comparecer
+              por qualquer motivo, tem o(a) CONTRATADO(A) a faculdade de se
+              fazer substituir por profissional de sua confiança.
+            </p>
+
+            <p>
+              <strong>PARÁGRAFO QUARTO – ALTERIDADE</strong> Cabe ao(à)
+              CONTRATADO(A) a responsabilidade e assunção dos riscos pelos
+              procedimentos odontológicos por ela realizados, bem como a compra
+              de materiais não fornecidos pelo CONTRATANTE necessários aos
+              citados procedimentos.
+            </p>
+
             <!--Texto que é substituido ao selecionar a especialidade-->
+            <div id="c9"></div>
+
             <p>
-            <strong>CLÁUSULA 09 – DOS VALORES DOS PROCEDIMENTOS</strong> <span id="desaparecer">Caberá ao(à) CONTRATADO(A) definir os valores relativos a cada procedimento odontológico.</span>
-                    <br>
-            <strong id="protetico-P2">PARÁGRAFO SEGUNDO</strong><span id="adicionar-protetico"></span>
-           
-            <p id="paragrafo-clinico"><strong id="p-fixo">PARÁGRAFO PRIMEIRO</strong> Os pagamentos relativos aos procedimentos serão realizados pelos clientes diretamente ao CONTRATANTE que, após a retirada de seu percentual, passará o remanescente ao(à) CONTRATADO(A).</p>
+              <strong>CLÁUSULA 10 - EXCLUSIVIDADE</strong> Todo e qualquer
+              paciente iniciado neste estabelecimento em hipótese nenhuma poderá
+              ser encaminhado para outro estabelecimento que realize os mesmos
+              serviços, sob pena de multa de cinco vezes o valor do tratamento
+              completo para o profissional que fez o encaminhamento.
             </p>
 
             <p>
-            <strong>CLÁUSULA 10 - EXCLUSIVIDADE</strong> Todo e qualquer paciente iniciado neste estabelecimento em hipótese nenhuma poderá ser encaminhado para outro estabelecimento que realize os mesmos serviços, sob pena de multa de cinco vezes o valor do tratamento completo para o profissional que fez o encaminhamento.
+              <strong>PARÁGRAFO PRIMEIRO</strong>: Entende-se que o paciente uma
+              vez que entrou no estabelecimento para realizar tratamento
+              odontológico e encaminhado para outro local sem o consentimento
+              dos sócios da empresa é crime penal e será realizado a apuração
+              dos fatos e responderá na vara criminal desta cidade.
             </p>
 
             <p>
-            <strong>PARÁGRAFO PRIMEIRO</strong>: Entende-se que o paciente uma vez que entrou no estabelecimento para realizar tratamento
-            odontológico e encaminhado para outro local sem o consentimento dos sócios da empresa é crime penal e será realizado a apuração dos fatos e responderá na vara criminal desta cidade.
+              <strong>CLÁUSULA 11- IMAGEM</strong> Autoriza o uso de sua imagem,
+              para veiculação pública, sem qualquer restrição ao formato da
+              mídia, sem nenhum ônus ou obrigação, em tempo indeterminado.
             </p>
 
             <p>
-            <strong>CLÁUSULA 11- IMAGEM</strong> Autoriza o uso de sua imagem, para veiculação pública, sem qualquer restrição ao formato da mídia, sem nenhum ônus ou obrigação, em tempo indeterminado.
+              <strong>PARÁGRAFO PRIMEIRO</strong> Fica assegurado ao
+              CONTRATANTE, mesmo após o período acima fixado, continuar
+              utilizando esses bens (imagem), para uso editorial, institucional
+              e não comercial.
             </p>
 
             <p>
-            <strong>PARÁGRAFO PRIMEIRO</strong> Fica assegurado ao CONTRATANTE, mesmo após o período acima fixado, continuar utilizando esses bens (imagem), para uso editorial, institucional e não comercial.
+              <strong>CLÁUSULA 12– FORO</strong> Elegem as partes o foro da
+              Comarca de São Luís - MA para dirimir eventuais questionamentos
+              acerca do presente contrato.
             </p>
 
-            <p>
-            <strong>CLÁUSULA 12– FORO</strong> Elegem as partes o foro da Comarca de São Luís - MA para dirimir eventuais questionamentos
-            acerca do presente contrato.
+            <p id="centro-data">
+              ______________,_____ de ____________ de _______.
             </p>
-
-            <p id="centro-data" >______________,_____ de ____________ de _______.</p>
-
 
             <div class="grid-container">
-                <span class="epc"><div class="grid-item">________________________</div></span>
-                <span class="epc"><div class="grid-item">________________________</div></span>
-                <div class="grid-item">CONTRATANTE</div>
-                <div class="grid-item">CONTRATADO(A)</div>
-                <span class="epc"><div class="grid-item">________________________</div></span>
-                <span class="epc"><div class="grid-item">________________________</div></span> 
-                <div class="grid-item">TESTEMUNHA 01</div>
-                <div class="grid-item">TESTEMUNHA 02</div>
-                <span class="epc"><div class="grid-item">NOME:___________________________</div></span>
-                <span class="epc"><div class="grid-item">NOME:___________________________</div></span>
-                <div class="grid-item">CPF: _____________________________</div> 
-                <div class="grid-item">CPF: _____________________________</div> 
-              
-              </div>
+              <span class="epc"
+                ><div class="grid-item">________________________</div></span
+              >
+              <span class="epc"
+                ><div class="grid-item">________________________</div></span
+              >
+              <div class="grid-item">CONTRATANTE</div>
+              <div class="grid-item">CONTRATADO(A)</div>
+              <span class="epc"
+                ><div class="grid-item">________________________</div></span
+              >
+              <span class="epc"
+                ><div class="grid-item">________________________</div></span
+              >
+              <div class="grid-item">TESTEMUNHA 01</div>
+              <div class="grid-item">TESTEMUNHA 02</div>
+              <span class="epc"
+                ><div class="grid-item">
+                  NOME:___________________________
+                </div></span
+              >
+              <span class="epc"
+                ><div class="grid-item">
+                  NOME:___________________________
+                </div></span
+              >
+              <div class="grid-item">CPF: _____________________________</div>
+              <div class="grid-item">CPF: _____________________________</div>
+            </div>
+          </div>
+          <!--fechando div do texto página2-->
 
-                        </div> <!--fechando div do texto página2-->
-
-                    <img class="footer-p2" src="Imagens/rodape.png" alt="footer">
-
-                </div> <!--fechando div pagina2-->
-        
-            </div>  <!--fechando div contrato--> 
-
+          <img class="footer-p2" src="Imagens/rodape.png" alt="footer" />
+        </div>
+        <!--fechando div pagina2-->
+      </div>
+      <!--fechando div contrato-->
     </main>
 
     <script type="module" src="script.js" defer></script>
-    <script src="Js/TempoReal.js" defer></script>
-    <script src="Js/alterar.js" defer></script>
-    
-</body>
-
+    <script src="Js/mostrar-Tempo-Real.js" defer></script>
+    <script src="Js/Alterar-Especialidades.js" defer></script>
+  </body>
 </html>
