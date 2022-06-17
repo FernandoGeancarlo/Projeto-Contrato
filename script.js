@@ -430,6 +430,14 @@ let clinica = [
     cnpjClinica: '44.384.553/0001-60',
     enderecoClinica:
       'AV. PRESIDENTE JOÃO PESSOA, Nº 21 - CENTRO - CEP: 58400-002, CAMPINA GRANDE - PB'
+  },
+
+  {
+    nome: 'TAQUARALTO',
+    razaoSocial: 'RTD E GOMES LTDA',
+    cnpjClinica: '45.579.480/0001-25',
+    enderecoClinica:
+      'AV TOCANTINS, S/N, QUADRA37 LOTE 26, CENTRO (TAQUARALTO) - CEP: 77.064-580, PALMAS - TO'
   }
 ]
 
@@ -462,8 +470,7 @@ function GerarContrato() {
   let selectorM = document.querySelector('#uf')
   let municipio = selectorM.options[selectorM.selectedIndex].text
   let UF = document.querySelector('#id-municipio')
-  UF.innerHTML = municipio;
-  
+  UF.innerHTML = municipio
 
   //desativa a aba de informações
   let formulario = document.getElementById('conteiner')

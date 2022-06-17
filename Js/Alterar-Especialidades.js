@@ -25,6 +25,7 @@ function setText() {
         C9.innerHTML = '<p><strong>CLÁUSULA 09 – DOS VALORES DOS PROCEDIMENTOS</strong> Caberá ao(à) CONTRATADO(A) definir os valores relativos a cada procedimento odontológico.</p>       <p><strong>PARÁGRAFO PRIMEIRO</strong> Os pagamentos relativos aos procedimentos serão realizados pelos clientes diretamente ao CONTRATANTE que, após a retirada de seu percentual, passará o remanescente ao(à) CONTRATADO(A).</p>';
         
     } else if(texto === 'implante'){
+        C9.innerHTML=''
         tituloC.textContent = 'CONTRATO DE PRESTAÇÃO DE SERVIÇO AUTÔNOMO DE IMPLANTODONTISTA';
         C9.innerHTML = "<p><strong>CLÁUSULA 09 – DOS VALORES DOS PROCEDIMENTOS</strong> Caberá ao(à) CONTRATADO(A) definir os valores relativos a cada procedimento odontológico.</p>  <p><strong>PARÁGRAFO PRIMEIRO</strong> Os pagamentos relativos aos procedimentos serão realizados pelos clientes diretamente à CONTRATADA que, após a retirada de seu percentual, passará o remanescente à CONTRATANTE, sendo o pago 50% do valor total, e o mesmo deverá ser pago dividido por fase (fase cirúrgica e fase protética).</p>                                      <p><strong>PARÁGRAFO SEGUNDO</strong> Os pagamentos relativos aos procedimentos serão realizados pelos clientes diretamente ao CONTRATANTE que, após a retirada de seu percentual, passará o remanescente ao(à) CONTRATADO(A).</p>";
 
@@ -32,5 +33,14 @@ function setText() {
         C9.innerHTML='';
         tituloC.textContent = 'CONTRATO DE PRESTAÇÃO DE SERVIÇO AUTÔNOMO DE CIRURGIÃO DENTISTA';
         C9.innerHTML = '<p><strong>CLÁUSULA 09 – DOS VALORES DOS PROCEDIMENTOS</strong> Caberá ao(à) CONTRATADO(A) definir os valores relativos a cada procedimento odontológico.</p> <p><strong>PARÁGRAFO PRIMEIRO</strong> Os pagamentos relativos aos procedimentos serão realizados pelos clientes diretamente ao CONTRATANTE que, após a retirada de seu percentual, passará o remanescente ao(à) CONTRATADO(A).</p>'
+    } else if(texto === 'estetica'){
+        C9.innerHTML=''
+        tituloC.textContent = 'CONTRATO DE PRESTAÇÃO DE SERVIÇO AUTÔNOMO, ESPECIALIDADE: ESTÉTICA';
+        C9.innerHTML = "<p><strong>CLÁUSULA 09 – DOS VALORES DOS PROCEDIMENTOS</strong> Caberá ao(à) CONTRATADO(A) definir os valores relativos a cada procedimento odontológico.</p>  <p><strong>PARÁGRAFO PRIMEIRO</strong> Os pagamentos relativos aos procedimentos serão realizados pelos clientes diretamente à CONTRATADA que, após a retirada de seu percentual, passará o remanescente à CONTRATANTE, sendo o pago 50% do valor total, e o mesmo deverá ser pago dividido por fase (fase cirúrgica e fase protética).</p>                                      <p><strong>PARÁGRAFO SEGUNDO</strong> Os pagamentos relativos aos procedimentos serão realizados pelos clientes diretamente ao CONTRATANTE que, após a retirada de seu percentual, passará o remanescente ao(à) CONTRATADO(A).</p>";
+    } else if(texto === 'endodontia'){
+        C9.innerHTML='';
+        tituloC.textContent = 'CONTRATO DE PRESTAÇÃO DE SERVIÇO AUTÔNOMO DE CIRURGIÃO DENTISTA';
+        C9.innerHTML = '<p><strong>CLÁUSULA 09 – DOS VALORES DOS PROCEDIMENTOS</strong> Caberá ao(à) CONTRATADO(A) definir os valores relativos a cada procedimento odontológico.</p> <p><strong>PARÁGRAFO PRIMEIRO</strong> Os pagamentos relativos aos procedimentos serão realizados pelos clientes diretamente ao CONTRATANTE que, após a retirada de seu percentual, passará o remanescente ao(à) CONTRATADO(A).</p>'
+        C13.innerHTML = '<p><strong>CLÁUSULA 13</strong> – Cabe ao CONTRATADO tomar conhecimento e fazer cumprir todas as regras contidas no manual de COMPLIANCE da rede DNTBRAS.</p>'
     }
 }
